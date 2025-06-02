@@ -1,3 +1,14 @@
+/* CSS Document */
+:root {
+    --verde: #CCE876;
+    --azul: #123A4D;
+    --gris: #444242;
+    --negro: #292B21;
+}
+
 * {
-    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
 }
