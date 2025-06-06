@@ -6,6 +6,7 @@
     --negro: #292B21;
     --blanco: #FCF9F5;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -17,13 +18,14 @@ html {
     font-family: "Archivo", sans-serif;
     font-optical-sizing: auto;
 }
-* ul{
+
+* ul {
     list-style-type: none;
     margin-block: 0;
     padding: 0;
 }
 
-* a{
+* a {
     text-decoration: none;
     color: var(--blanco);
 }
@@ -54,16 +56,17 @@ header {
     width: 100%;
     padding: 1.5rem 7.5rem;
 }
+
 header img {
     height: 2rem;
     width: auto;
 }
 
-/* nav */
 nav {
     display: flex;
     gap: 150px;
 }
+
 nav section {
     display: flex;
     align-items: center;
@@ -77,9 +80,9 @@ nav ul {
     gap: 150px;
     align-items: center;
 }
-nav li{
-    text-transform: capitalize;
 
+nav li {
+    text-transform: capitalize;
 }
 
 nav li ul {
@@ -103,16 +106,17 @@ nav a {
     font-size: 1rem;
     opacity: 50%;
 }
+
 nav a:hover {
     opacity: 100%;
 
 }
+
 nav p {
     font-size: 1rem;
     font-weight: 700;
 }
 
-/* footer */
 footer {
     display: flex;
     flex-flow: column wrap;
@@ -120,6 +124,7 @@ footer {
     align-items: center;
     position: relative;
 }
+
 footer section {
     display: flex;
     justify-content: space-between;
@@ -127,15 +132,18 @@ footer section {
     width: 1400px;
     padding: 40px 120px;
 }
-footer h1{
+
+footer h1 {
     font-size: 1rem;
 }
+
 footer ul {
     display: flex;
     justify-content: space-between;
     width: 760px;
 }
-footer a{
+
+footer a {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -143,7 +151,7 @@ footer a{
     color: var(--negro);
 }
 
-footer a:hover{
+footer a:hover {
     opacity: 100%;
 }
 
@@ -156,10 +164,12 @@ footer a:hover{
     flex-flow: column wrap;
     gap: 20px;
 }
+
 .footer-negativo p {
     opacity: 50%;
     font-size: 1rem;
 }
+
 .footer-negativo a {
     opacity: 100%;
 }
