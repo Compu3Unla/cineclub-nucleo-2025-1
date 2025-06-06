@@ -243,3 +243,86 @@ footer a:hover {
     background-color: var(--blanco);
     color: var(--verde);
 }
+
+.bienvenidos-a-cineclub-nucleo {
+    background-image: url("img/home/fondo-bienvenida.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 16rem;
+    padding-top: 220px;
+    line-height: 125px;
+}
+
+.bienvenido-texto h1 {
+    font-family: "Bricolage Grotesque";
+    font-weight: 800;
+    font-size: 127px;
+
+}
+
+.asociate-a-nuestro-club {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 16rem;
+    padding-top: 220px;
+    line-height: 125px;
+}
+
+.asociate-texto h1 {
+    font-family: "Bricolage Grotesque";
+    font-weight: 800;
+    font-size: 127px;
+
+}
+
+.bienvenido-botones {
+    font-family: "archivo" sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1000px;
+}
+
+.boton-asociate {
+    display: flex;
+    margin-top: 20px;
+
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-entradas {
+    display: flex;
+    margin-top: 20px;
+
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-asociate:hover {
+    background-color: var(--verde);
+    color: var(--negro);
+}
+
+.boton-entradas:hover {
+    background-color: var(--verde);
+    color: var(--negro);
+}
