@@ -270,6 +270,22 @@ footer a:hover {
     line-height: 125px;
 }
 
+.historia-cineclub-nucleo {
+    background-image: url("img/historia/01-salvador.jpg");
+    background-size: auto;
+    background-position:start;
+    background-repeat: no-repeat;
+
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+    padding: 0 16rem;
+    padding-top: 220px;
+    line-height: 125px;
+}
+
 .bienvenido-texto h1 {
     font-family: "Bricolage Grotesque";
     font-weight: 800;
