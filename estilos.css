@@ -25,23 +25,25 @@ html {
 
 * a{
     text-decoration: none;
+    color: var(--blanco);
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    min-width: 100hw;
     background-color: var(--blanco);
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     flex: 1;
 }
 
+main h2 {
+    font-weight: 800;
+    font-size: 80px;
+    margin-bottom: 40px;
+}
 header {
     display: flex;
     flex-wrap: wrap;
@@ -110,12 +112,6 @@ nav p {
     font-weight: 700;
 }
 
-main h2 {
-    font-weight: 800;
-    font-size: 80px;
-    color: var(--negro);
-}
-
 /* footer */
 footer {
     display: flex;
@@ -175,10 +171,7 @@ footer a:hover{
 }
 
 .avisos {
-    margin:100px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    padding: 60px 260px;
 }
 .avisos-grid {
     display: flex;
@@ -251,9 +244,101 @@ footer a:hover{
     color: var(--verde);
 }
 
+.bienvenidos-a-cineclub-nucleo {
+    background-image: url("img/home/fondo-bienvenida.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 16rem;
+    padding-top: 220px;
+    line-height: 125px;
+}
+
+.bienvenido-texto h1 {
+    font-family: "Bricolage Grotesque";
+    font-weight: 800;
+    font-size: 127px;
+
+}
+
+.asociate-a-nuestro-club {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 16rem;
+    padding-top: 220px;
+    line-height: 125px;
+}
+
+.asociate-texto h1 {
+    font-family: "Bricolage Grotesque";
+    font-weight: 800;
+    font-size: 127px;
+
+}
+
+.bienvenido-botones {
+    font-family: "archivo" sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1000px;
+}
+
+.boton-asociate {
+    display: flex;
+    margin-top: 20px;
+
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-entradas {
+    display: flex;
+    margin-top: 20px;
+
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-asociate:hover {
+    background-color: var(--verde);
+    color: var(--negro);
+}
+
+.boton-entradas:hover {
+    background-color: var(--verde);
+    color: var(--negro);
+}
+
+.botones {
+    display: flex;
+    gap: 75px;
+    
+}
+
+
+
+
 .titulo{
-    width: 1260px;
-    margin: 1em;
+    width: 100%;
+    padding: 1em 260px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -269,8 +354,6 @@ footer a:hover{
     align-items: start;
     position: relative;
 }
-
-
 
 .slider {
     display: flex;
@@ -314,6 +397,7 @@ footer a:hover{
     font-size: 2em;
     font-weight: 900;
     color: var(--blanco);
+    margin-bottom: auto;
 }
 .slider-textbox h3 {
     font-size: 2em;
