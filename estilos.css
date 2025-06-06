@@ -1,5 +1,4 @@
 /* CSS Document */
-/* seteos generales */
 :root {
     --verde: #CCE876;
     --azul: #123A4D;
@@ -27,7 +26,22 @@ html {
 * a{
     text-decoration: none;
 }
-/* header */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100hw;
+    background-color: var(--blanco);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -65,6 +79,22 @@ nav li{
     text-transform: capitalize;
 
 }
+
+nav li ul {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
+    background-color: var(--negro);
+    align-items: start;
+    justify-content: start;
+    gap: 2em;
+    padding: 1em 2em 1em 1em;
+}
+nav li:hover > ul{
+    opacity: 100%;
+}
+
 nav a {
     cursor: pointer;
     color: var(--blanco);
@@ -73,16 +103,17 @@ nav a {
 }
 nav a:hover {
     opacity: 100%;
+
 }
 nav p {
     font-size: 1rem;
     font-weight: 700;
 }
-/* main */
-main div {
-    width: 100%;
-    height: 2000px;
-    background: var(--verde);
+
+main h2 {
+    font-weight: 800;
+    font-size: 80px;
+    color: var(--negro);
 }
 
 /* footer */
@@ -142,3 +173,198 @@ footer a:hover{
     bottom: 15rem;
     right: 7.5rem;
 }
+
+.avisos {
+    margin:100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.avisos-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.aviso {
+    display: flex;
+    max-width: 620px;
+    background-color: transparent;
+}
+
+.aviso-img {
+    width: 200px;
+    height: 200px;
+}
+
+.aviso-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.aviso-texto h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--negro);
+}
+
+.aviso-texto h4 {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: var(--gris);
+}
+
+.aviso-texto p {
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gris);
+}
+
+.aviso-boton {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.aviso-boton button {
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 17px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.aviso-boton button:hover {
+    background-color: var(--verde);
+    color: var(--negro);
+}
+
+.aviso-boton button:active {
+    background-color: var(--blanco);
+    color: var(--verde);
+}
+
+.titulo{
+    width: 1260px;
+    margin: 1em;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+.slider-container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+}
+
+
+
+.slider {
+    display: flex;
+    width: 99vw;
+    height: auto;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior:smooth;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: slide 10s infinite alternate ease-in-out;
+}
+.slider li {
+    width: 100%;
+    position: relative;
+}
+.slider .slider-textbox {
+    padding: 20px 40px;
+    width: 40em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: absolute;
+    top:25%;
+    left: 10em;
+    color: var(--blanco);
+    background-color: #292B2125 ;
+    z-index: 3;
+}
+.slider-textbox h1 {
+    font-size: 3em;
+    font-weight: 700;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+.slider-textbox h2 {
+    font-size: 2em;
+    font-weight: 900;
+    color: var(--blanco);
+}
+.slider-textbox h3 {
+    font-size: 2em;
+    font-weight: 300;
+    font-style: italic;
+}
+.slider .slider-textbox button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: 2em;
+    font-weight: 400;
+    background-color: var(--azul);
+    color: var(--blanco);
+    border:none;
+    transition: all 0.3s ease;
+}
+
+.slider .slider-textbox button:hover {
+    background-color:var(--verde);
+    color: var(--negro);
+}
+
+.slider img {
+    height: auto;
+    width: 100vw;
+    filter: brightness(75%);
+    z-index: 1;
+}
+
+.slider-navarrows {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em;
+    z-index: 2;
+}
+
+.slider-navarrows svg {
+    color: var(--azul);
+}
+
+.slider-navarrows svg:hover {
+    color: var(--verde);
+}
+
+

@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="esta es la pagina del cineclub nucleo">
-    <meta name="author" content="uriel walter lopez, diana ortiz, fernando barrera, alejandro guillermo faba">
+    <meta name="author"
+        content="uriel walter lopez, daiana aylen ortiz, fernando ezequiel barrera, alejandro guillermo faba">
     <meta name="keywords" content="cineclub, nucleo, cine, ">
     <title>CineClub N&uacute;cleo - Inicio</title>
     <link href="estilos.css" rel="stylesheet" type="text/css" />
@@ -23,9 +24,20 @@
         <section>
             <nav>
                 <ul>
-                    <li><a href="">calendario</a></li>
-                    <li><a href="">idioma</a></li>
-                    <li><a href="">categor&iacute;as</a></li>
+                    <li><a href="pages/calendario.html">Calendario</a></li>
+                    <li><a href="">Idioma</a>
+                        <ul>
+                            <li>Ingl&eacute;s</li>
+                            <li>Español</li>
+                        </ul>
+                    </li>
+                    <li><a href="">secciones</a>
+                        <ul>
+                            <li><a href="pages/avisos.html">Avisos</a></li>
+                            <li><a href="pages/historia.html">Historia</a></li>
+                            <li><a href="pages/reseñas.html">Reseñas</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <section>
                     <a href="">
@@ -37,7 +49,121 @@
         </section>
     </header>
     <main>
-        <div></div>
+        <section class="titulo">
+            <h2>Proximas funciones</h2>
+            <a href="" class="aviso-boton"><button>Calendario de funciones</button></a>
+        </section>
+        <section class="slider-container">
+            <section class="slider">
+                <ul>
+                    <li id="slide-1">
+                        <img src="img/prox-funciones/01-banner-la-venganza.jpg" alt="imagen slider1">
+                        <section class="slider-textbox">
+                            <h1>La venganza</h1>
+                            <h3>Gustav Möller, 2024</h3>
+                            <button>Comprar entrada</button>
+                            <button class="ver-trailer">Ver trailer</button>
+                        </section>
+                        <section class="slider-navarrows">
+                            <a href="#slide-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M20 34.8906H10L0 17.5703L10 0.25H20L10 17.5703L20 34.8906Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                            <a href="#slide-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                        </section>
+                    </li>
+                    <li id="slide-2">
+                        <img src="img/prox-funciones/02-banner-pelicula.jpg" alt="imagen slider1">
+                        <section class="slider-textbox">
+                            <h1>Foxtrot (The Other Side of Paradise)</h1>
+                            <h2>Charlotte Rampling X 4</h2>
+                            <h3>Arturo Ripstein, 1976</h3>
+                            <button>Comprar entrada</button>
+                        </section>
+                        <section class="slider-navarrows">
+                            <a href="#slide-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M20 34.8906H10L0 17.5703L10 0.25H20L10 17.5703L20 34.8906Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                            <a href="#slide-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                        </section>
+                    </li>
+                    <li id="slide-3">
+                        <img src="img/prox-funciones/03-banner-pelicula.jpg" alt="imagen slider1">
+                        <section class="slider-textbox">
+                            <h1>Paris by Night</h1>
+                            <h2>Charlotte Rampling X 4</h2>
+                            <h3>David Hare, 1988</h3>
+                            <button>Comprar entrada</button>
+                        </section>
+                        <section class="slider-navarrows">
+                            <a href="#slide-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M20 34.8906H10L0 17.5703L10 0.25H20L10 17.5703L20 34.8906Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                            <a href="#slide-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                        </section>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="avisos">
+            <h2>Avisos</h2>
+            <div class="avisos-grid">
+
+                <article class="aviso">
+                    <img src="img/avisos/01-charlotte.jpg" alt="Charlotte Rampling" class="aviso-img">
+                    <div class="aviso-contenido">
+                        <div class="aviso-texto">
+                            <h3>Charlotte Rampling X4</h3>
+                            <h4>Ciclo de Revisión “Salvador Sammaritano” dedicado a Charlotte Rampling. En Mayo.</h4>
+                            <p>Hoy se abusa de la palabra “icónica” pero una de las pocas figuras del cine a las que
+                                verdad corresponde ese término es Charlotte Rampling. Su belleza inusual la volvió un
+                                ícono de la moda primero y una promesa cinematográfica después, pero fueron su
+                                inteligencia y audacia las que la transformaron en una figura indispensable del cine de
+                                los 70.</p>
+                        </div>
+                        <div class="aviso-boton">
+                            <button>Leer más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="aviso">
+                    <img src="img/avisos/alerta.svg" alt="Ícono de alerta" class="aviso-img">
+                    <div class="aviso-contenido">
+                        <div class="aviso-texto">
+                            <h3>Núcleo inició su temporada número 73 con cambios.</h3>
+                            <h4>El martes 11 de febrero se inició la nueva temporada del Cine Club Núcleo, la número 73
+                                en
+                                forma ininterrumpida.</h4>
+                            <p>Hay cambios como consecuencia de nuevas disposiciones del INCAA: los martes tendremos una
+                                sola función a las 17.30 h, en lugar de las tradicionales dos exhibiciones. Además, se
+                                mantendrán las del segundo y cuarto domingo de cada mes.</p>
+                        </div>
+                        <div class="aviso-boton">
+                            <button>Leer más</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
     <footer>
         <a href="#header"><img class="flecha-scroll-to-top" src="img/footer/scroll-to-top.svg" alt="flecha con funsion scroll to top"></a>
