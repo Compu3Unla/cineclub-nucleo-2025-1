@@ -7,6 +7,8 @@
     <meta name="description" content="esta es la pagina del cineclub nucleo">
     <meta name="author"
         content="uriel walter lopez, daiana aylen ortiz, fernando ezequiel barrera, alejandro guillermo faba">
+    <meta name="author"
+        content="uriel walter lopez, daiana aylen ortiz, fernando ezequiel barrera, alejandro guillermo faba">
     <meta name="keywords" content="cineclub, nucleo, cine, ">
     <title>CineClub N&uacute;cleo - Inicio</title>
     <link href="estilos.css" rel="stylesheet" type="text/css" />
@@ -24,9 +26,20 @@
         <section>
             <nav>
                 <ul>
-                    <li><a href="">calendario</a></li>
-                    <li><a href="">idioma</a></li>
-                    <li><a href="">categor&iacute;as</a></li>
+                    <li><a href="pages/calendario.html">Calendario</a></li>
+                    <li><a href="">Idioma</a>
+                        <ul>
+                            <li>Ingl&eacute;s</li>
+                            <li>Español</li>
+                        </ul>
+                    </li>
+                    <li><a href="">secciones</a>
+                        <ul>
+                            <li><a href="pages/avisos.html">Avisos</a></li>
+                            <li><a href="pages/historia.html">Historia</a></li>
+                            <li><a href="pages/reseñas.html">Reseñas</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <section>
                     <a href="">
@@ -53,15 +66,97 @@
                     <h1>¡Asociate a</h1>
                     <h1>nuestro club!</h1>
                 </div>
-                <div class="bienvenido-botones">
-                        <a href="" class="boton-asociate">Asociate</a>
-                        <a href="" class="boton-entradas">Entradas</a>
-                </div>
+                <section class="botones">
+                    <div class="aviso-boton">
+                        <button><a href="">Asociate</a></button>
+                    </div>
+                    <div class="aviso-boton">
+                        <button><a href="">Entradas</a></button>
+                    </div>
+
+                </section>
+
             </div>
         </section>
 
+
+
+        <article class="slider-container">
+            <section class="titulo">
+                <h2>Proximas funciones</h2>
+                <a href="" class="aviso-boton"><button>Calendario de funciones</button></a>
+            </section>
+            <section class="slider">
+                <ul>
+                    <li id="slide-1">
+                        <img src="img/prox-funciones/01-banner-la-venganza.jpg" alt="imagen slider1">
+                        <section class="slider-textbox">
+                            <h1>La venganza</h1>
+                            <h3>Gustav Möller, 2024</h3>
+                            <button>Comprar entrada</button>
+                            <button class="ver-trailer">Ver trailer</button>
+                        </section>
+                        <section class="slider-navarrows">
+                            <a href="#slide-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M20 34.8906H10L0 17.5703L10 0.25H20L10 17.5703L20 34.8906Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                            <a href="#slide-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                        </section>
+                    </li>
+                    <li id="slide-2">
+                        <img src="img/prox-funciones/02-banner-pelicula.jpg" alt="imagen slider1">
+                        <section class="slider-textbox">
+                            <h1>Foxtrot (The Other Side of Paradise)</h1>
+                            <h2>Charlotte Rampling X 4</h2>
+                            <h3>Arturo Ripstein, 1976</h3>
+                            <button>Comprar entrada</button>
+                        </section>
+                        <section class="slider-navarrows">
+                            <a href="#slide-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M20 34.8906H10L0 17.5703L10 0.25H20L10 17.5703L20 34.8906Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                            <a href="#slide-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                        </section>
+                    </li>
+                    <li id="slide-3">
+                        <img src="img/prox-funciones/03-banner-pelicula.jpg" alt="imagen slider1">
+                        <section class="slider-textbox">
+                            <h1>Paris by Night</h1>
+                            <h2>Charlotte Rampling X 4</h2>
+                            <h3>David Hare, 1988</h3>
+                            <button>Comprar entrada</button>
+                        </section>
+                        <section class="slider-navarrows">
+                            <a href="#slide-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M20 34.8906H10L0 17.5703L10 0.25H20L10 17.5703L20 34.8906Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                            <a href="#slide-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                                    viewBox="0 0 20 35" fill="none">
+                                    <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                        </section>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
         <section class="avisos">
-            <h2 class="avisos-titulo">Avisos</h2>
+            <h2>Avisos</h2>
             <div class="avisos-grid">
 
                 <article class="aviso">
@@ -105,6 +200,8 @@
     <footer>
         <a href="#header"><img class="flecha-scroll-to-top" src="img/footer/scroll-to-top.svg"
                 alt="flecha con funsion scroll to top"></a>
+        <a href="#header"><img class="flecha-scroll-to-top" src="img/footer/scroll-to-top.svg"
+                alt="flecha con funsion scroll to top"></a>
         <section>
             <h1>Contacto</h1>
             <ul>
@@ -112,7 +209,8 @@
                 </li>
                 <li><a href=""><img src="img/footer/correo.svg" alt="icono de correo para footer">
                         ccnucleo@hotmail.com</a></li>
-                <li><a href=""><img src="img/footer/ig.svg" alt="icono de instagram para footer">cineclubnucleo</a></li>
+                <li><a href=""><img src="img/footer/ig.svg" alt="icono de instragram para footer">cineclubnucleo</a>
+                </li>
 
             </ul>
         </section>
