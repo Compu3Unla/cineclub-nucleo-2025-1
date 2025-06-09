@@ -467,3 +467,9 @@ footer a:hover {
 .slider-navarrows svg:hover {
     color: var(--verde);
 }
+
+.slider-home {
+    position: absolute;
+    top: 610px;
+    padding-left: 1410px;
+}
