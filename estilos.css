@@ -47,6 +47,11 @@ main h2 {
     margin-bottom: 40px;
 }
 
+main h2 {
+    font-weight: 800;
+    font-size: 80px;
+    margin-bottom: 40px;
+}
 header {
     display: flex;
     flex-wrap: wrap;
@@ -99,6 +104,7 @@ nav li ul {
 }
 
 nav li:hover>ul {
+nav li:hover > ul{
     opacity: 100%;
 }
 
@@ -185,7 +191,6 @@ footer a:hover {
 .avisos {
     padding: 60px 260px;
 }
-
 .avisos-grid {
     display: flex;
     justify-content: space-between;
@@ -273,6 +278,22 @@ footer a:hover {
     line-height: 125px;
 }
 
+.historia-cineclub-nucleo {
+    background-image: url("img/historia/01-salvador.jpg");
+    background-size: auto;
+    background-position:start;
+    background-repeat: no-repeat;
+
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+    padding: 0 16rem;
+    padding-top: 220px;
+    line-height: 125px;
+}
+
 .bienvenido-texto h1 {
     font-family: "Bricolage Grotesque";
     font-weight: 800;
@@ -343,7 +364,6 @@ footer a:hover {
 .botones {
     display: flex;
     gap: 75px;
-
 }
 
 .titulo {
@@ -354,7 +374,7 @@ footer a:hover {
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
-}
+  }
 
 .slider-container {
     width: 100%;
@@ -373,6 +393,7 @@ footer a:hover {
     overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 .slider ul {
@@ -386,7 +407,7 @@ footer a:hover {
     width: 100%;
     position: relative;
 }
-
+  
 .slider .slider-textbox {
     padding: 20px 40px;
     width: 40em;
@@ -399,6 +420,13 @@ footer a:hover {
     left: 10em;
     color: var(--blanco);
     background-color: #292B2125;
+    z-index: 3;
+}
+
+    top:25%;
+    left: 10em;
+    color: var(--blanco);
+    background-color: #292B2125 ;
     z-index: 3;
 }
 
@@ -431,7 +459,7 @@ footer a:hover {
     font-weight: 400;
     background-color: var(--azul);
     color: var(--blanco);
-    border: none;
+    border:none;
     transition: all 0.3s ease;
 }
 
@@ -467,6 +495,7 @@ footer a:hover {
 .slider-navarrows svg:hover {
     color: var(--verde);
 }
+
 
 .slider-home {
     position: absolute;
