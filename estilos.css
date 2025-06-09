@@ -46,12 +46,6 @@ main h2 {
     font-size: 80px;
     margin-bottom: 40px;
 }
-
-main h2 {
-    font-weight: 800;
-    font-size: 80px;
-    margin-bottom: 40px;
-}
 header {
     display: flex;
     flex-wrap: wrap;
@@ -102,8 +96,6 @@ nav li ul {
     gap: 2em;
     padding: 1em 2em 1em 1em;
 }
-
-nav li:hover>ul {
 nav li:hover > ul{
     opacity: 100%;
 }
@@ -278,22 +270,6 @@ footer a:hover {
     line-height: 125px;
 }
 
-.historia-cineclub-nucleo {
-    background-image: url("img/historia/01-salvador.jpg");
-    background-size: auto;
-    background-position:start;
-    background-repeat: no-repeat;
-
-    color: var(--blanco);
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    height: 100vh;
-    padding: 0 16rem;
-    padding-top: 220px;
-    line-height: 125px;
-}
-
 .bienvenido-texto h1 {
     font-family: "Bricolage Grotesque";
     font-weight: 800;
@@ -364,9 +340,13 @@ footer a:hover {
 .botones {
     display: flex;
     gap: 75px;
+    
 }
 
-.titulo {
+
+
+
+.titulo{
     width: 100%;
     padding: 1em 260px;
     height: auto;
@@ -374,8 +354,7 @@ footer a:hover {
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
-  }
-
+}
 .slider-container {
     width: 100%;
     margin: 0 auto;
@@ -392,7 +371,6 @@ footer a:hover {
     height: auto;
     overflow: hidden;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     scroll-behavior:smooth;
 }
 
@@ -402,12 +380,10 @@ footer a:hover {
     width: 300%;
     animation: slide 10s infinite alternate ease-in-out;
 }
-
 .slider li {
     width: 100%;
     position: relative;
 }
-  
 .slider .slider-textbox {
     padding: 20px 40px;
     width: 40em;
@@ -416,39 +392,28 @@ footer a:hover {
     flex-direction: column;
     gap: 1em;
     position: absolute;
-    top: 25%;
-    left: 10em;
-    color: var(--blanco);
-    background-color: #292B2125;
-    z-index: 3;
-}
-
     top:25%;
     left: 10em;
     color: var(--blanco);
     background-color: #292B2125 ;
     z-index: 3;
 }
-
 .slider-textbox h1 {
     font-size: 3em;
     font-weight: 700;
     font-family: "Bricolage Grotesque", sans-serif;
 }
-
 .slider-textbox h2 {
     font-size: 2em;
     font-weight: 900;
     color: var(--blanco);
     margin-bottom: auto;
 }
-
 .slider-textbox h3 {
     font-size: 2em;
     font-weight: 300;
     font-style: italic;
 }
-
 .slider .slider-textbox button {
     display: flex;
     width: 100%;
@@ -464,7 +429,7 @@ footer a:hover {
 }
 
 .slider .slider-textbox button:hover {
-    background-color: var(--verde);
+    background-color:var(--verde);
     color: var(--negro);
 }
 
@@ -495,7 +460,6 @@ footer a:hover {
 .slider-navarrows svg:hover {
     color: var(--verde);
 }
-
 
 .slider-home {
     position: absolute;
