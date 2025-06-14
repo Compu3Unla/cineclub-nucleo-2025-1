@@ -256,8 +256,6 @@ footer a:hover {
     color: var(--verde);
 }
 
-
-
 .bienvenidos-a-cineclub-nucleo {
     background-image: url("img/home/fondo-bienvenida.jpg");
     background-size: cover;
@@ -284,8 +282,6 @@ footer a:hover {
     font-family: "Bricolage Grotesque";
     font-weight: 800;
     font-size: 127px;
-
-
 }
 
 .asociate-a-nuestro-club {
@@ -293,15 +289,13 @@ footer a:hover {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    padding: 0 16rem;
-    padding-top: 220px;
-    line-height: 125px;
 }
 
 .asociate-texto h1 {
     font-family: "Bricolage Grotesque";
     font-weight: 800;
     font-size: 127px;
+    line-height: 125px;
 
 }
 
@@ -479,7 +473,7 @@ footer a:hover {
 
 #login-popup {
     background-color: #292B21aa;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: absolute;
