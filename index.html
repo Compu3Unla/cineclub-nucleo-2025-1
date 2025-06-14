@@ -109,12 +109,38 @@
             </nav>
         </section>
     </header>
+    <div popover="" id="perfil-popup" class="perfil-popup">
+        <section>
+            <form method="post" action="" target="_blank">
+                <h1>Sos socio? Ingresa!</h1>
+                <div>
+                    <section>
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="nombre" id="usuario" maxlength="70" placeholder="Pone tu nombre"
+                            required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="mail" maxlength="100" placeholder="Pone tu email" required>
+                        <label for="password">Ingres&aacute; tu contraseña</label>
+                        <input type="password" name="password" id="clave" maxlength="12"
+                            placeholder="Pone la contraseña" required>
+                    </section>
+                </div>
+                <a href="">Olvidaste tu contraseña</a>
+                <input type="submit" value="Inicia session">
+            </form>
+            <section class="login-botones">
+                <p>¿No tenes cuenta?</p>
+                <a href="">Registrate</a>
+            </section>
+        </section>
+        <button popovertarget="perfil-popup" popovertargetaction="hide">x</button>
+    </div>
+
     <main>
         <section class="bienvenidos-a-cineclub-nucleo">
             <div class="bienvenida">
                 <div class="bienvenido-texto">
-                    <h1>Bienvenido a </h1>
-                    <h1>CineClub Núcleo</h1>
+                    <h1>Bienvenido a CineClub Núcleo </h1>
                 </div>
             </div>
             <section class="slider-home">
@@ -132,12 +158,8 @@
                     <h1>nuestro club!</h1>
                 </div>
                 <section class="botones">
-                    <div class="aviso-boton">
-                        <button><a href="">Asociate</a></button>
-                    </div>
-                    <div class="aviso-boton">
-                        <button><a href="">Entradas</a></button>
-                    </div>
+                    <a href="#" class="btn">Asociate</a>
+                    <a href="#" class="btn"> Entradas</a>
                 </section>
             </div>
         </section>
@@ -145,7 +167,7 @@
         <article class="slider-container">
             <section class="titulo">
                 <h2>Proximas funciones</h2>
-                <a href="" class="aviso-boton"><button>Calendario de funciones</button></a>
+                <a href="#" class="btn">Calendario de funciones</a>
             </section>
             <section class="slider">
                 <ul>
@@ -154,8 +176,8 @@
                         <section class="slider-textbox">
                             <h1>La venganza</h1>
                             <h3>Gustav Möller, 2024</h3>
-                            <button>Comprar entrada</button>
-                            <button class="ver-trailer">Ver trailer</button>
+                            <a href="#" class="btn">Comprar entrada</a>
+                            <a href="#" class="btn ver-trailer">Ver trailer</a>
                         </section>
                         <section class="slider-navarrows">
                             <a href="#slide-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
@@ -176,7 +198,7 @@
                             <h1>Foxtrot (The Other Side of Paradise)</h1>
                             <h2>Charlotte Rampling X 4</h2>
                             <h3>Arturo Ripstein, 1976</h3>
-                            <button>Comprar entrada</button>
+                            <a href="#" class="btn">Comprar entrada</a>
                         </section>
                         <section class="slider-navarrows">
                             <a href="#slide-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
@@ -197,7 +219,7 @@
                             <h1>Paris by Night</h1>
                             <h2>Charlotte Rampling X 4</h2>
                             <h3>David Hare, 1988</h3>
-                            <button>Comprar entrada</button>
+                            <a href="#" class="btn">Comprar entrada</a>
                         </section>
                         <section class="slider-navarrows">
                             <a href="#slide-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
@@ -232,9 +254,7 @@
                                 inteligencia y audacia las que la transformaron en una figura indispensable del cine de
                                 los 70.</p>
                         </div>
-                        <div class="aviso-boton">
-                            <button>Leer más</button>
-                        </div>
+                        <a href="#" class="btn">Leer más</a>
                     </div>
                 </article>
 
@@ -250,9 +270,7 @@
                                 sola función a las 17.30 h, en lugar de las tradicionales dos exhibiciones. Además, se
                                 mantendrán las del segundo y cuarto domingo de cada mes.</p>
                         </div>
-                        <div class="aviso-boton">
-                            <button>Leer más</button>
-                        </div>
+                        <a href="" class="btn">Leer más</a>
                     </div>
                 </article>
             </div>
