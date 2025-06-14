@@ -18,9 +18,44 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
         rel="stylesheet">
+    <script>
+        function cambiarDisplay(visibilidadNueva) {
+            document.getElementById("login-popup").style.display = visibilidadNueva
+        }
+        function cerrarPopup() {
+            cambiarDisplay('none')
+        }
+    </script>
 </head>
 
 <body>
+    <!-- LOGIN POP UP-->
+    <div id="login-popup"> 
+        <section class="login-textblock">
+            <form method="post" action="" target="_blank">
+                <h1>Ya sos socio? Ingresa a tu cuenta</h1>
+                    <section>
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" maxlength="70" placeholder="Pone tu nombre"
+                            required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" maxlength="100" placeholder="Pone tu email"
+                            required>
+                        <label for="password">Ingres&aacute; tu contraseña</label>
+                        <input type="password" name="password" id="password" maxlength="12"
+                            placeholder="Pone la contraseña" required>
+                        <a href="">Olvidaste tu contraseña</a>
+                    </section>
+                <input type="submit" value="Inicia sesi&oacute;n">
+            </form>
+            <section class="login-botones">
+                <p>¿No tenes cuenta?</p>
+                <a href="">Registrate</a>
+                <button onClick="cerrarPopup()">X</button>
+            </section>
+
+        </section>
+    </div>
     <header id="header">
         <a href=""><img src="img/nav/logo-nav.svg" alt="logo de cineclub nucleo"></a>
         <section>
@@ -42,7 +77,8 @@
                     </li>
                 </ul>
                 <section>
-                    <a href="">
+                    <!-- LOGIN DESPLEGABLE DESDE PERFIL (todavia en proceso)-->
+                    <button popovertarget="perfil-popup" class="perfil-popup-button">
                         <p>Perf&iacute;l</p>
                         <img src="img/nav/new-profile.svg" alt="foto de perfil del miembro/usuario">
                     </button>
@@ -107,6 +143,12 @@
                     <h1>Bienvenido a CineClub Núcleo </h1>
                 </div>
             </div>
+            <section class="slider-home">
+                <a href="#slide-home2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
+                        viewBox="0 0 20 35" fill="none">
+                        <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z" fill="currentColor" />
+                    </svg></a>
+            </section>
         </section>
 
         <section class="asociate-a-nuestro-club">
@@ -119,11 +161,8 @@
                     <a href="#" class="btn">Asociate</a>
                     <a href="#" class="btn"> Entradas</a>
                 </section>
-
             </div>
         </section>
-
-
 
         <article class="slider-container">
             <section class="titulo">

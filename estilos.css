@@ -12,6 +12,7 @@ html {
 }
 
 * {
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -510,6 +511,7 @@ footer a:hover {
     position: relative;
 }
 
+
 .login-textblock form, [popover] form{
     display: flex;
     flex-direction: column;
@@ -523,6 +525,7 @@ footer a:hover {
     width: 100%;
     height: auto;
 }
+
 .login-textblock form label, [popover] form label{
     display: block;
     font-weight:700;
@@ -535,13 +538,16 @@ footer a:hover {
     font-size: 1em;
     font-weight: 400;
 }
+
 [popover] form a{
     color: var(--azul);
 }
+
 [popover] form a:hover{
     color: var(--blanco);
     font-weight: 700;
 }
+
 
 .login-textblock form a:hover{
     color:var(--azul);
@@ -554,8 +560,8 @@ footer a:hover {
     border: none;
     background-color: var(--blanco);
     transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
-
 }
+
 [popover] form input{
     color: var(--blanco);
     width: 100%;
@@ -573,19 +579,21 @@ footer a:hover {
     border: none;
 }
 
+
 [popover] form input:focus {
     color: var(--negro);
     background-color: var(--verde);
     padding-left: 1em;
     outline: none;
-
 }
+
 .login-textblock input:focus {
     background-color: var(--verde);
     padding-left: 1em;
     color:var(--negro);
     outline: none;
 }
+
 
 .login-textblock input[type="submit"],[popover] form input[type="submit"] {
     padding: 1em;
@@ -597,6 +605,7 @@ footer a:hover {
     background-color: var(--azul);
     transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
 }
+
 
 .login-textblock input[type="submit"]:hover, [popover] form input[type="submit"]:hover {
     color: var(--negro);
@@ -640,7 +649,6 @@ footer a:hover {
     background-color: var(--blanco);
     cursor: pointer;
     transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
-
 }
 
 .login-botones button:hover { 
@@ -648,6 +656,7 @@ footer a:hover {
     color: var(--blanco);
     background-color: var(--azul);
 }
+
 
 [popover] button {
     top: 1em;
