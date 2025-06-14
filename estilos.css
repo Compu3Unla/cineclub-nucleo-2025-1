@@ -39,6 +39,10 @@ body {
 
 main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
 }
 
 main h2 {
@@ -181,18 +185,20 @@ footer a:hover {
 }
 
 .avisos {
-    padding: 60px 260px;
+    max-width: 70vw;
 }
 .avisos-grid {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 4em;
+    margin-bottom: 5em ;
 }
 
 .aviso {
     display: flex;
-    max-width: 620px;
+    max-width: 50%;
     background-color: transparent;
+    gap: .5em;
 }
 
 .aviso-img {
@@ -204,8 +210,9 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 20px;
     flex-grow: 1;
+    align-items: end;
+    gap: 1em;
 }
 
 .aviso-texto h3 {
@@ -234,7 +241,11 @@ footer a:hover {
     margin-top: 20px;
 }
 
-.aviso-boton button {
+{
+
+
+}
+.btn {
     background-color: var(--azul);
     color: var(--blanco);
     border: none;
@@ -244,36 +255,45 @@ footer a:hover {
     transition: all 0.3s ease;
 }
 
-.aviso-boton button:hover {
+.btn:hover {
     background-color: var(--verde);
     color: var(--negro);
 }
 
-.aviso-boton button:active {
+.btn:active {
     background-color: var(--blanco);
     color: var(--verde);
 }
+
+
 
 .bienvenidos-a-cineclub-nucleo {
     background-image: url("img/home/fondo-bienvenida.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     color: var(--blanco);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
     height: 100vh;
-    padding: 0 16rem;
     padding-top: 220px;
     line-height: 125px;
 }
 
+.bienvenida {
+    display: flex;
+    justify-content: center;
+}
+.bienvenido-texto {
+    width: 58vw;
+}
 .bienvenido-texto h1 {
     font-family: "Bricolage Grotesque";
     font-weight: 800;
     font-size: 127px;
+
 
 }
 
@@ -343,16 +363,13 @@ footer a:hover {
     
 }
 
-
-
-
 .titulo{
     width: 100%;
     padding: 1em 260px;
     height: auto;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
 }
 .slider-container {
@@ -461,4 +478,219 @@ footer a:hover {
     color: var(--verde);
 }
 
+.slider-home {
+    position: absolute;
+    top: 610px;
+}
 
+/* POP UPS */
+
+
+#login-popup {
+    background-color: #292B21aa;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 99vw;
+    height: 100vh;
+    z-index: 30;
+    padding: 0;
+}
+
+.login-textblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 40%;
+    background-color: var(--blanco);
+    padding: 3em;
+    gap: .5em;
+    position: relative;
+}
+
+.login-textblock form, [popover] form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.login-textblock form section, [popover] form>div>section {
+    display: flex;
+    flex-direction:column;
+    gap: 1em;
+    width: 100%;
+    height: auto;
+}
+.login-textblock form label, [popover] form label{
+    display: block;
+    font-weight:700;
+    margin-top: .5em;
+}
+
+.login-textblock form a, [popover] form a{
+    color:var(--negro);
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: 400;
+}
+[popover] form a{
+    color: var(--azul);
+}
+[popover] form a:hover{
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.login-textblock form a:hover{
+    color:var(--azul);
+    font-weight: 700;
+}
+
+.login-textblock form input{
+    width: 100%;
+    height: 3em;
+    border: none;
+    background-color: var(--blanco);
+    transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
+
+}
+[popover] form input{
+    color: var(--blanco);
+    width: 100%;
+    height: 2.5em;
+    border: none;
+    background-color: var(--negro);
+    transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
+}
+
+
+.login-textblock input:hover,[popover] form input:hover {
+    background-color: var(--gris);
+    padding-left: 1em;
+    color:var(--blanco);
+    border: none;
+}
+
+[popover] form input:focus {
+    color: var(--negro);
+    background-color: var(--verde);
+    padding-left: 1em;
+    outline: none;
+
+}
+.login-textblock input:focus {
+    background-color: var(--verde);
+    padding-left: 1em;
+    color:var(--negro);
+    outline: none;
+}
+
+.login-textblock input[type="submit"],[popover] form input[type="submit"] {
+    padding: 1em;
+    width: auto;
+    height: auto;
+    font-size: 1em;
+    color: var(--blanco);
+    cursor: pointer;
+    background-color: var(--azul);
+    transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
+}
+
+.login-textblock input[type="submit"]:hover, [popover] form input[type="submit"]:hover {
+    color: var(--negro);
+    background-color: var(--verde);
+    font-weight: 700;
+    outline: 1px solid var(--negro);
+}
+
+.login-botones {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1em;
+    margin-top: 1em;
+}
+.login-botones p {
+    font-size: 1em;
+}
+
+.login-botones a {
+    color: var(--negro);
+    background-color: var(--blanco);
+    outline: 1px solid var(--negro);
+    padding: .5em 1.5em;
+}
+
+.login-botones a:hover {
+    color: var(--azul);
+    background-color: var(--verde);    
+}
+
+.login-botones button {
+    position: absolute;
+    top: 2.3em;
+    right: 2.5em;
+    font-size: 1.4em;
+    border: none;
+    padding: .4em;
+    background-color: var(--blanco);
+    cursor: pointer;
+    transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
+
+}
+
+.login-botones button:hover { 
+    transform: scale(1.2);
+    color: var(--blanco);
+    background-color: var(--azul);
+}
+
+[popover] button {
+    top: 1em;
+    right: 1em;
+    position: absolute;
+    background-color: var(--negro);
+    border: none;
+    color: var(--blanco);
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
+}
+[popover] button:hover { 
+    color: var(--verde);
+}
+
+.perfil-popup-button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: var(--blanco);
+    opacity: 50%;
+    background-color: var(--negro);
+    border: none;
+    position: relative;
+}
+
+.perfil-popup-button:hover {
+    opacity: 100%;
+}
+
+[popover] {
+    position: absolute;
+    color:var(--blanco);
+    background-color: var(--negro);
+    left: 74vw;
+    top: 5em;
+    border: none;
+    height: 75vh;
+    padding: 1em 2em;
+    border: 1px solid var(--gris);
+}
+[popover]>section {
+    width: 20vw; 
+    height: auto;
+}
