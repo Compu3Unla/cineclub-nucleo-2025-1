@@ -236,16 +236,6 @@ footer a:hover {
     color: var(--gris);
 }
 
-.aviso-boton {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-{
-
-
-}
 .btn {
     background-color: var(--azul);
     color: var(--blanco);
@@ -489,7 +479,7 @@ footer a:hover {
 
 #login-popup {
     background-color: #292B21aa;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -694,9 +684,8 @@ footer a:hover {
     background-color: var(--negro);
     left: 74vw;
     top: 5em;
-    border: none;
     height: 75vh;
-    padding: 1em 2em;
+    padding: 2em;
     border: 1px solid var(--gris);
 }
 [popover]>section {
