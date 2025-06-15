@@ -268,7 +268,7 @@ footer a:hover {
     width: 100%;
     height: 100vh;
     padding-top: 220px;
-    line-height: 125px;
+
 }
 
 .bienvenida {
@@ -296,7 +296,6 @@ footer a:hover {
     font-weight: 800;
     font-size: 127px;
     line-height: 125px;
-
 }
 
 .bienvenido-botones {
@@ -323,7 +322,6 @@ footer a:hover {
 .boton-entradas {
     display: flex;
     margin-top: 20px;
-
     background-color: var(--azul);
     color: var(--blanco);
     border: none;
@@ -349,8 +347,7 @@ footer a:hover {
 }
 
 .titulo{
-    width: 100%;
-    padding: 1em 260px;
+    width: 70vw;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -363,7 +360,7 @@ footer a:hover {
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     position: relative;
 }
 
@@ -473,7 +470,7 @@ footer a:hover {
 
 #login-popup {
     background-color: #292B21aa;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -685,4 +682,81 @@ footer a:hover {
 [popover]>section {
     width: 20vw; 
     height: auto;
+}
+
+
+/* RESEÑAS RECIENTES*/
+
+.reseñasrecientes-container {
+    max-width: 70vw;
+    color: var(--color-blanco);
+    margin: 10em 0 20em;
+}
+.reseñasrecientes {
+    margin: 3em 0;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+} 
+
+.pelicula {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+.pelicula a:hover::after {
+    opacity: 100%;
+}
+.pelicula a::after {
+    height: 100%;
+    width: 100%;
+    color: var(--blanco);
+    background-color: var(--azul);
+    position: absolute;
+    inset: 0;
+    display: grid;
+    content: "";
+    padding: 2em;
+    place-items: center;
+    opacity: 0;
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+.pelicula>section {
+    display: flex;
+    color: var(--blanco);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    height: 353px;    
+}
+.pelicula:has(a:hover).pelicula>section {
+    opacity: 1;
+    z-index: 3;
+}
+.pelicula>section>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.pelicula h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.pelicula h4 {
+    font-size: 1.2em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.pelicula h5 {
+    font-size: 1.2em;
 }
