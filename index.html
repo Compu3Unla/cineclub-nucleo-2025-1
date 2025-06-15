@@ -30,22 +30,20 @@
 
 <body>
     <!-- LOGIN POP UP-->
-    <div id="login-popup"> 
+    <div id="login-popup">
         <section class="login-textblock">
             <form method="post" action="" target="_blank">
                 <h1>Ya sos socio? Ingresa a tu cuenta</h1>
-                    <section>
-                        <label for="Nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" maxlength="70" placeholder="Pone tu nombre"
-                            required>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" maxlength="100" placeholder="Pone tu email"
-                            required>
-                        <label for="password">Ingres&aacute; tu contraseña</label>
-                        <input type="password" name="password" id="password" maxlength="12"
-                            placeholder="Pone la contraseña" required>
-                        <a href="">Olvidaste tu contraseña</a>
-                    </section>
+                <section>
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" maxlength="70" placeholder="Pone tu nombre" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" maxlength="100" placeholder="Pone tu email" required>
+                    <label for="password">Ingres&aacute; tu contraseña</label>
+                    <input type="password" name="password" id="password" maxlength="12" placeholder="Pone la contraseña"
+                        required>
+                    <a href="">Olvidaste tu contraseña</a>
+                </section>
                 <input type="submit" value="Inicia sesi&oacute;n">
             </form>
             <section class="login-botones">
@@ -82,29 +80,6 @@
                         <p>Perf&iacute;l</p>
                         <img src="img/nav/new-profile.svg" alt="foto de perfil del miembro/usuario">
                     </button>
-                    <div popover="" id="perfil-popup" class="perfil-popup">
-                        <form method="post" action="" target="_blank">
-                            <h1>Sos socio? Ingresa!</h1>
-                            <div>
-                                <section>
-                                    <label for="Nombre">Nombre</label>
-                                    <input type="text" name="nombre" id="usuario" maxlength="70"
-                                        placeholder="Pone tu nombre" required>
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" id="mail" maxlength="100"
-                                        placeholder="Pone tu email" required>
-                                    <label for="password">Ingres&aacute; tu contraseña</label>
-                                    <input type="password" name="password" id="clave" maxlength="12"
-                                        placeholder="Pone la contraseña" required>
-                                </section>
-                            </div>
-                            <input type="submit" value="Inicia session">
-                        </form>
-                        <a href="">Olvidaste tu contraseña</a>
-                        <p>¿No tenes cuenta?</p>
-                        <a href="">Registrate</a>
-                        <button popovertarget="perfil-popup" popovertargetaction="hide">x</button>
-                    </div>
                 </section>
             </nav>
         </section>
@@ -274,6 +249,113 @@
                     </div>
                 </article>
             </div>
+        </section>
+        <section class="reseñasrecientes-container">
+                <h2>Reseñas recientes</h2>
+                <a href="#" class="btn">Calendario de funciones</a>
+            <section class="reseñasrecientes">
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/01-la-venganza.jpg" alt="portada pelicula la venganza"></a>
+                    <section>
+                        <div>
+                            <h3>La venganza</h3>
+                            <h4>Gustav Möller, 2024</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </section>
+                </section>
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/02-las-vidas.jpg" alt="portada pelicula la vidas de sing sing"></a>
+                    <section>
+                        <div>
+                            <h3>Las vidas de Sing Sing</h3>
+                            <h4>Greg Kwedar, 2023</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
+                    </section>
+                </section>
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/03-chien-dela.jpg" alt="portada pelicula la venganza"></a>
+                    <section>
+                        <div>
+                            <h3>Perro feroz</h3>
+                            <h4>Jean-Baptiste Durant, 2023</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
+                    </section>
+                </section>
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/04-el-chef.jpg" alt="portada pelicula la venganza"></a>
+                    <section>
+                        <div>
+                            <h3>El chef</h3>
+                            <h4>Philip Barantini, 2021</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
+                    </section>
+                </section>
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/05-gloria.jpg" alt="portada pelicula la venganza"></a>
+                    <section>
+                        <div>
+                            <h3>Gloria</h3>
+                            <h4>Marguerita Vicario, 2024</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
+                    </section>
+                </section>
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/06-vidas-pasadas.jpg" alt="portada pelicula la venganza"></a>
+                    <section>
+                        <div>
+                            <h3>Vidas pasadas</h3>
+                            <h4>Celine Song, 2023</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
+                    </section>
+                </section>
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/07-la-zone.jpg" alt="portada pelicula la venganza"></a>
+                    <section>
+                        <div>
+                            <h3>Zona de inter&eacute;s</h3>
+                            <h4>Jonathan Glazer, 2023</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
+                    </section>
+                </section>
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/08-valeria-viene.jpg" alt="portada pelicula la venganza"></a>
+                    <section>
+                        <div>
+                            <h3>Valeria viene a casarse</h3>
+                            <h4>Michal Vinik, 2022</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
+                    </section>
+                </section>
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/09-un-silencio.jpg" alt="portada pelicula la venganza"></a>
+                    <section>
+                        <div>
+                            <h3>Un silencio</h3>
+                            <h4>Joachim Lafosse, 2023</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
+                    </section>
+                </section>
+                <section class="pelicula">
+                    <a href="#"><img src="img/recientes-reviews/10-parthenope.jpg" alt="portada pelicula la venganza"></a>
+                    <section>
+                        <div>
+                            <h3>Parthenope</h3>
+                            <h4>Paolo Sorrentino, 2024</h4>
+                        </div>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
+                    </section>
+                </section>
+            </section>
+            <a href="#" class="btn">Ver m&aacute;s reseñas</a>
         </section>
     </main>
     <footer>
