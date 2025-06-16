@@ -12,7 +12,6 @@ html {
 }
 
 * {
-
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -40,10 +39,6 @@ body {
 
 main {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3em;
 }
 
 main h2 {
@@ -51,6 +46,7 @@ main h2 {
     font-size: 80px;
     margin-bottom: 40px;
 }
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -101,7 +97,8 @@ nav li ul {
     gap: 2em;
     padding: 1em 2em 1em 1em;
 }
-nav li:hover > ul{
+
+nav li:hover>ul {
     opacity: 100%;
 }
 
@@ -134,8 +131,8 @@ footer section {
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    width: 70vw;
-    padding: 120px 0;
+    width: 1400px;
+    padding: 40px 120px;
 }
 
 footer h1 {
@@ -164,22 +161,19 @@ footer a:hover {
     background-color: var(--negro);
     color: var(--blanco);
     width: 100%;
-    padding: 2em 0;
+    padding: 30px 120px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: column wrap;
     gap: 20px;
 }
 
 .footer-negativo p {
     opacity: 50%;
-    font-size: 1em;
-    width: 70vw;
-
+    font-size: 1rem;
 }
 
 .footer-negativo a {
-    width: 70vw;
+    opacity: 100%;
 }
 
 .flecha-scroll-to-top {
@@ -189,19 +183,19 @@ footer a:hover {
 }
 
 .avisos {
-    max-width: 70vw;
+    padding: 60px 260px;
 }
+
 .avisos-grid {
     display: flex;
     justify-content: space-between;
-    gap: 4em;
-    margin-bottom: 5em ;
+    gap: 20px;
 }
 
 .aviso {
     display: flex;
-    max-width: 50%;
-    gap: .5em;
+    max-width: 620px;
+    background-color: transparent;
 }
 
 .aviso-img {
@@ -213,9 +207,8 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 20px;
     flex-grow: 1;
-    align-items: end;
-    gap: 1em;
 }
 
 .aviso-texto h3 {
@@ -238,7 +231,13 @@ footer a:hover {
     color: var(--gris);
 }
 
-.btn {
+.aviso-boton {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.aviso-boton button {
     background-color: var(--azul);
     color: var(--blanco);
     border: none;
@@ -248,121 +247,35 @@ footer a:hover {
     transition: all 0.3s ease;
 }
 
-.btn:hover {
+.aviso-boton button:hover {
     background-color: var(--verde);
     color: var(--negro);
 }
 
-.btn:active {
+.aviso-boton button:active {
     background-color: var(--blanco);
     color: var(--verde);
 }
 
-.bienvenidos-a-cineclub-nucleo {
-    background-image: url("img/home/fondo-bienvenida.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--blanco);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Esto creo que es la sección del slide que hizo Ale */
+
+.titulo {
     width: 100%;
-    height: 100vh;
-    padding-top: 220px;
-
-}
-
-.bienvenida {
-    display: flex;
-    justify-content: center;
-}
-.bienvenido-texto {
-    width: 58vw;
-}
-.bienvenido-texto h1 {
-    font-family: "Bricolage Grotesque";
-    font-weight: 800;
-    font-size: 127px;
-}
-
-.asociate-a-nuestro-club {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
-
-.asociate-texto h1 {
-    font-family: "Bricolage Grotesque";
-    font-weight: 800;
-    font-size: 127px;
-    line-height: 125px;
-}
-
-.bienvenido-botones {
-    font-family: "archivo" sans-serif;
-    font-weight: 600;
-    font-size: 35px;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 1000px;
-}
-
-.boton-asociate {
-    display: flex;
-    margin-top: 20px;
-
-    background-color: var(--azul);
-    color: var(--blanco);
-    border: none;
-    padding: 10px 17px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.boton-entradas {
-    display: flex;
-    margin-top: 20px;
-    background-color: var(--azul);
-    color: var(--blanco);
-    border: none;
-    padding: 10px 17px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.boton-asociate:hover {
-    background-color: var(--verde);
-    color: var(--negro);
-}
-
-.boton-entradas:hover {
-    background-color: var(--verde);
-    color: var(--negro);
-}
-
-.botones {
-    display: flex;
-    gap: 75px;
-    
-}
-
-.titulo{
-    width: 70vw;
+    padding: 1em 260px;
     height: auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
 }
+
 .slider-container {
     width: 100%;
     margin: 0 auto;
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     position: relative;
 }
 
@@ -372,7 +285,7 @@ footer a:hover {
     height: auto;
     overflow: hidden;
     scroll-snap-type: x mandatory;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 .slider ul {
@@ -381,10 +294,12 @@ footer a:hover {
     width: 300%;
     animation: slide 10s infinite alternate ease-in-out;
 }
+
 .slider li {
     width: 100%;
     position: relative;
 }
+
 .slider .slider-textbox {
     padding: 20px 40px;
     width: 40em;
@@ -393,28 +308,32 @@ footer a:hover {
     flex-direction: column;
     gap: 1em;
     position: absolute;
-    top:25%;
+    top: 25%;
     left: 10em;
     color: var(--blanco);
-    background-color: #292B2125 ;
+    background-color: #292B2125;
     z-index: 3;
 }
+
 .slider-textbox h1 {
     font-size: 3em;
     font-weight: 700;
     font-family: "Bricolage Grotesque", sans-serif;
 }
+
 .slider-textbox h2 {
     font-size: 2em;
     font-weight: 900;
     color: var(--blanco);
     margin-bottom: auto;
 }
+
 .slider-textbox h3 {
     font-size: 2em;
     font-weight: 300;
     font-style: italic;
 }
+
 .slider .slider-textbox button {
     display: flex;
     width: 100%;
@@ -425,12 +344,12 @@ footer a:hover {
     font-weight: 400;
     background-color: var(--azul);
     color: var(--blanco);
-    border:none;
+    border: none;
     transition: all 0.3s ease;
 }
 
 .slider .slider-textbox button:hover {
-    background-color:var(--verde);
+    background-color: var(--verde);
     color: var(--negro);
 }
 
@@ -462,9 +381,111 @@ footer a:hover {
     color: var(--verde);
 }
 
-.slider-home {
+
+/* esto es todo el home, si no me deje algo arriba */
+
+.boton-asociate:hover {
+    background-color: var(--verde);
+    color: var(--negro);
+}
+
+.boton-entradas:hover {
+    background-color: var(--verde);
+    color: var(--negro);
+}
+
+.slider-bienvenida-container {
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+}
+
+.slider-bienvenida {
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.slider-bienvenida ul {
+    display: flex;
+    width: 200%;
+}
+
+.slider-bienvenida li {
+    width: 100%;
+    position: relative;
+}
+
+.slider-bienvenida img {
+    width: 100vw;
+    height: auto;
+    filter: brightness(75%);
+}
+
+.slider-bienvenida-texto {
+    padding: 20px 40px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 610px;
+    top: 38%;
+    left: 15em;
+    color: var(--blanco);
+    z-index: 3;
+}
+
+.slider-bienvenida-texto h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    font-size: 127px;
+    color: var(--blanco)
+}
+
+.slider-bienvenida-botones {
+    font-family: "archivo" sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1000px;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.boton-asociate, .boton-entradas {
+    display: flex;
+    margin-top: 20px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 20px 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 25px;
+}
+
+.slider-bienvenida-navarrows {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 13em;
+    z-index: 2;
+}
+
+.slider-bienvenida-navarrows svg {
+    color: var(--verde);
+}
+
+.slider-bienvenida-navarrows svg:hover {
+    color: var(--azul);
 }
 
 /* POP UPS */
