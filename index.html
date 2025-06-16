@@ -51,37 +51,46 @@
         </section>
     </header>
     <main>
-        <section class="bienvenidos-a-cineclub-nucleo">
-            <div class="bienvenida">
-                <div class="bienvenido-texto">
-                    <h1>Bienvenido a </h1>
-                    <h1>CineClub Núcleo</h1>
-                </div>
-            </div>
-            <section class="slider-home">
-                <a href="#slide-home2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
-                        viewBox="0 0 20 35" fill="none">
-                        <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z" fill="currentColor" />
-                    </svg></a>
-            </section>
+<article class="slider-bienvenida-container">
+  <section class="slider-bienvenida">
+    <ul>
+      <!-- Esto seria la primera -->
+      <li id="slide-home1">
+        <img src="img/home/fondo-bienvenida.jpg" alt="imagen cine fondo">
+        <section class="slider-bienvenida-texto">
+          <h1>Bienvenido a</h1>
+          <h1>CineClub Núcleo</h1>
         </section>
-
-        <section class="asociate-a-nuestro-club">
-            <div class="asociate">
-                <div class="asociate-texto">
-                    <h1>¡Asociate a</h1>
-                    <h1>nuestro club!</h1>
-                </div>
-                <section class="botones">
-                    <div class="aviso-boton">
-                        <button><a href="">Asociate</a></button>
-                    </div>
-                    <div class="aviso-boton">
-                        <button><a href="">Entradas</a></button>
-                    </div>
-                </section>
-            </div>
+        <section class="slider-bienvenida-navarrows">
+          <a href="#slide-home2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="35" viewBox="0 0 20 35" fill="none">
+              <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z" fill="currentColor"/>
+            </svg>
+          </a>
         </section>
+      </li>
+      <!-- Y esto el slide 2 -->
+      <li id="slide-home2">
+        <img src="img/home/fondo-bienvenida.jpg" alt="imagen cine fondo">
+        <section class="slider-bienvenida-texto">
+          <h1>¡Asociate a</h1>
+          <h1>nuestro club!</h1>
+          <div class="slider-bienvenida-botones">
+            <button class="boton-asociate">Asociate</button>
+            <button class="boton-entradas">Entradas</button>
+          </div>
+        </section>
+        <section class="slider-bienvenida-navarrows">
+          <a href="#slide-home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="35" viewBox="0 0 20 35" fill="none">
+              <path d="M20 34.8906H10L0 17.5703L10 0.25H20L10 17.5703L20 34.8906Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </section>
+      </li>
+    </ul>
+  </section>
+</article>
 
         <article class="slider-container">
             <section class="titulo">
