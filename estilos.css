@@ -206,7 +206,7 @@ footer a:hover {
 }
 
 .avisos {
-    max-width: 70vw;
+    padding: 60px 260px;
 }
 
 .avisos-grid {
@@ -231,9 +231,8 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 20px;
     flex-grow: 1;
-    align-items: end;
-    gap: 1em;
 }
 
 .aviso-texto h3 {
@@ -256,6 +255,7 @@ footer a:hover {
     color: var(--gris);
 }
 
+
 .btn {
     background-color: var(--azul);
     color: var(--blanco);
@@ -266,22 +266,25 @@ footer a:hover {
     transition: all 0.3s ease;
 }
 
+
 .btn:hover {
     background-color: var(--verde);
     color: var(--negro);
 }
+
 
 .btn:active {
     background-color: var(--blanco);
     color: var(--verde);
 }
 
+
 .titulo {
     width: 70vw;
     height: auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
 }
 
@@ -393,7 +396,7 @@ footer a:hover {
     color: var(--verde);
 }
 
-
+/* esto es todo el home, si no me deje algo arriba */
 
 .boton-asociate:hover {
     background-color: var(--verde);
@@ -432,12 +435,11 @@ footer a:hover {
     width: 200%;
     animation: sliderbienvenida 6s forwards linear;
     animation-delay: 2s;
-
 }
 
 @keyframes sliderbienvenida {
 
-    from {
+    0% {
         margin-left: 0;
     }
 
@@ -449,7 +451,7 @@ footer a:hover {
         margin-left: -100%;
     }
 
-    to {
+    100% {
         margin-left: -100%;
     }
 }
@@ -457,6 +459,7 @@ footer a:hover {
 
 .slider-bienvenida li {
     width: 100vw;
+
     position: relative;
 }
 
@@ -494,6 +497,7 @@ footer a:hover {
     margin-top: 20px;
 }
 
+
 .boton-asociate,
 .boton-entradas {
     display: flex;
@@ -519,16 +523,6 @@ footer a:hover {
     padding: 13em;
     z-index: 2;
 }
-
-.slider-bienvenida-navarrows svg {
-    color: var(--verde);
-}
-
-.slider-bienvenida-navarrows svg:hover {
-    color: var(--azul);
-}
-
-
 
 /* POP UPS */
 
