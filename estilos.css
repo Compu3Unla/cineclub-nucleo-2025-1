@@ -205,6 +205,10 @@ footer a:hover {
     right: 7.5rem;
 }
 
+.avisos {
+    max-width: 70vw;
+}
+
 .avisos-grid {
     display: flex;
     justify-content: space-between;
