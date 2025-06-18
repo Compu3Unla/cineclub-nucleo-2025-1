@@ -32,47 +32,48 @@
     <!-- LOGIN POP UP-->
     <div id="login-popup">
         <section class="login-textblock">
-            <form method="post" action="" target="_blank">
-                <h1>Ya sos socio? Ingresa a tu cuenta</h1>
-                <section>
-                    <label for="Nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" maxlength="70" placeholder="Pone tu nombre" required>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" maxlength="100" placeholder="Pone tu email" required>
-                    <label for="password">Ingres&aacute; tu contraseña</label>
-                    <input type="password" name="password" id="password" maxlength="12" placeholder="Pone la contraseña"
-                        required>
-                    <a href="">Olvidaste tu contraseña</a>
-                </section>
-                <input type="submit" value="Inicia sesi&oacute;n">
-            </form>
-            <section class="login-botones">
-                <p>¿No tenes cuenta?</p>
-                <a href="">Registrate</a>
+            <h1>¿Ya sos socio?</h1>
+            <h2>Ingres&aacute; a tu cuenta</h2>
+            <section>
+                <a href="#" class="btn">Inici&aacute; sesi&oacute;n</a>
+                <a href="#" class="login-botones">Registrate</a>
                 <button onClick="cerrarPopup()">X</button>
             </section>
 
         </section>
     </div>
     <header id="header">
-        <a href=""><img src="img/nav/logo-nav.svg" alt="logo de cineclub nucleo"></a>
+        <a href="#"><img src="img/nav/logo-nav.svg" alt="logo de cineclub nucleo"></a>
         <section>
             <nav>
+                <label for="menu-hamburguesa" class="menu-hamburguesa-label">
+                        <img src="img/nav/mobile/hamburguesa.svg" alt="icono menu hamburguesa open">
+                </label>
+                <input type="checkbox" name="" id="menu-hamburguesa" class="menu-hamburguesa-input">
                 <ul>
                     <li><a href="pages/calendario.html">Calendario</a></li>
-                    <li><a href="">Idioma</a>
+                    <li><details>
+                        <summary>Idioma</summary>
                         <ul>
                             <li>Ingl&eacute;s</li>
                             <li>Español</li>
                         </ul>
+                        </details>
                     </li>
-                    <li><a href="">secciones</a>
+                    <li><details>
+                        <summary>secciones</summary>
                         <ul>
                             <li><a href="pages/avisos.html">Avisos</a></li>
                             <li><a href="pages/historia.html">Historia</a></li>
                             <li><a href="pages/reseñas.html">Reseñas</a></li>
                         </ul>
+                        </details>
                     </li>
+                    <section class="menu-hamburguesa-buttons">
+                        <a href="#" class="btn">Iniciar sesi&oacute;n</a>
+                        <a href="#" class="btn">Registrate</a>
+                        <a href="#" class="btn acento">Hacete socio</a>
+                    </section>
                 </ul>
                 <button popovertarget="perfil-popup" class="perfil-popup-button">
                     <p>Perf&iacute;l</p>
@@ -84,26 +85,25 @@
     <div popover="" id="perfil-popup" class="perfil-popup">
         <section>
             <form method="post" action="" target="_blank">
-                <h1>Sos socio? Ingresa!</h1>
+                <h1>¿Sos socio? Ingres&aacute;</h1>
                 <div>
                     <section>
                         <label for="Nombre">Nombre</label>
-                        <input type="text" name="nombre" id="usuario" maxlength="70" placeholder="Pone tu nombre"
+                        <input type="text" name="nombre" id="usuario" maxlength="70" placeholder="Pon&eacute; tu nombre"
                             required>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="mail" maxlength="100" placeholder="Pone tu email" required>
+                        <input type="email" name="email" id="mail" maxlength="100" placeholder="Pon&eacute; tu email"
+                            required>
                         <label for="password">Ingres&aacute; tu contraseña</label>
                         <input type="password" name="password" id="clave" maxlength="12"
-                            placeholder="Pone la contraseña" required>
+                            placeholder="Pon&eacute; la contraseña" required>
                     </section>
                 </div>
                 <a href="">Olvidaste tu contraseña</a>
-                <input type="submit" value="Inicia session">
+                <input type="submit" value="Inicia sesi&oacute;n">
             </form>
-            <section class="login-botones">
-                <p>¿No tenes cuenta?</p>
-                <a href="">Registrate</a>
-            </section>
+            <p>¿No ten&eacute;s cuenta?</p>
+            <a href="#" class="login-botones">Registrate</a>
         </section>
         <button popovertarget="perfil-popup" popovertargetaction="hide">x</button>
     </div>
@@ -114,24 +114,15 @@
                 <ul>
                     <!-- Esto seria la primera -->
                     <li id="slide-home1">
-                        <img src="img/home/fondo-bienvenida.jpg" alt="imagen cine fondo">
                         <section class="slider-bienvenida-texto">
                             <h1>Bienvenido a</h1>
                             <h1>CineClub Núcleo</h1>
                         </section>
-                        <section class="slider-bienvenida-navarrows">
-                            <a href="#slide-home2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="35" viewBox="0 0 20 35"
-                                    fill="none">
-                                    <path d="M10 17.5703L0 0.25H10L20 17.5703L10 34.8906H0L10 17.5703Z"
-                                        fill="currentColor" />
-                                </svg>
-                            </a>
-                        </section>
+
                     </li>
                     <!-- Y esto el slide 2 -->
                     <li id="slide-home2">
-                        <img src="img/home/fondo-bienvenida.jpg" alt="imagen cine fondo">
+
                         <section class="slider-bienvenida-texto">
                             <h1>¡Asociate a</h1>
                             <h1>nuestro club!</h1>
@@ -139,15 +130,6 @@
                                 <button class="boton-asociate">Asociate</button>
                                 <button class="boton-entradas">Entradas</button>
                             </div>
-                        </section>
-                        <section class="slider-bienvenida-navarrows">
-                            <a href="#slide-home1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="35" viewBox="0 0 20 35"
-                                    fill="none">
-                                    <path d="M20 34.8906H10L0 17.5703L10 0.25H20L10 17.5703L20 34.8906Z"
-                                        fill="currentColor" />
-                                </svg>
-                            </a>
                         </section>
                     </li>
                 </ul>
@@ -228,7 +210,7 @@
             </section>
         </article>
 
-        <section class="avisos">
+        <article class="avisos">
             <h2>Avisos</h2>
             <div class="avisos-grid">
 
@@ -249,7 +231,6 @@
                 </article>
 
                 <article class="aviso">
-                    <img src="img/avisos/alerta.svg" alt="Ícono de alerta" class="aviso-img">
                     <div class="aviso-contenido">
                         <div class="aviso-texto">
                             <h3>Núcleo inició su temporada número 73 con cambios.</h3>
@@ -264,10 +245,16 @@
                     </div>
                 </article>
             </div>
-        </section>
-        <section class="reseñasrecientes-container">
-            <h2>Reseñas recientes</h2>
-            <a href="#" class="btn">Calendario de funciones</a>
+        </article>
+        <article class="reseñasrecientes-container">
+            <section class="titulo">
+                <h2>Reseñas recientes</h2>
+                <details>
+                    <summary class="btn">Ordenar</summary>
+                    <a href="#">Recientes</a>
+                    <a href="#">Antiguas</a>
+                </details>                
+            </section>
             <section class="reseñasrecientes">
                 <section class="pelicula">
                     <a href="#"><img src="img/recientes-reviews/01-la-venganza.jpg"
@@ -378,19 +365,34 @@
                 </section>
             </section>
             <a href="#" class="btn">Ver m&aacute;s reseñas</a>
-        </section>
+        </article>
     </main>
     <footer>
+        <img src="img/footer/mobile/logo-footer-mobile.svg" class="logo-footer-mobile"
+            alt="logo que solo aparecera en el footer de la version mobile">
         <a href="#header"><img class="flecha-scroll-to-top" src="img/footer/scroll-to-top.svg"
                 alt="flecha con funsion scroll to top"></a>
         <section>
             <h1>Contacto</h1>
             <ul>
-                <li><a href=""><img src="img/footer/telefono.svg" alt="icono de telefono para footer"> 4825-4102</a>
+                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path opacity="0.5"
+                                d="M16 11.0765L11.3151 10.5342L9.07495 12.7744C6.55153 11.4907 4.50039 9.43958 3.21667 6.91616L5.46575 4.66707L4.92348 0H0.0252801C-0.49032 9.04968 6.95033 16.4903 16 15.9747V11.0765Z"
+                                fill="currentColor" />
+                        </svg> 4825-4102</a>
                 </li>
-                <li><a href=""><img src="img/footer/correo.svg" alt="icono de correo para footer">
+                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"
+                            fill="none">
+                            <path opacity="0.5" d="M0 16V0H20V16H0ZM10 9L18 4V2L10 7L2 2V4L10 9Z" fill="currentColor" />
+                        </svg>
                         ccnucleo@hotmail.com</a></li>
-                <li><a href=""><img src="img/footer/ig.svg" alt="icono de instragram para footer">cineclubnucleo</a>
+                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                            fill="none">
+                            <path opacity="0.5"
+                                d="M5.8 0H14.2C17.4 0 20 2.6 20 5.8V14.2C20 15.7383 19.3889 17.2135 18.3012 18.3012C17.2135 19.3889 15.7383 20 14.2 20H5.8C2.6 20 0 17.4 0 14.2V5.8C0 4.26174 0.61107 2.78649 1.69878 1.69878C2.78649 0.61107 4.26174 0 5.8 0ZM5.6 2C4.64522 2 3.72955 2.37928 3.05442 3.05442C2.37928 3.72955 2 4.64522 2 5.6V14.4C2 16.39 3.61 18 5.6 18H14.4C15.3548 18 16.2705 17.6207 16.9456 16.9456C17.6207 16.2705 18 15.3548 18 14.4V5.6C18 3.61 16.39 2 14.4 2H5.6ZM15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7Z"
+                                fill="currentColor" />
+                        </svg>cineclubnucleo</a>
                 </li>
 
             </ul>
