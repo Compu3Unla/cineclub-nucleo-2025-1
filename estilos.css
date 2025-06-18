@@ -12,7 +12,6 @@ html {
 }
 
 * {
-
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -44,21 +43,21 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 3em;
+    overflow: hidden;
 }
 
 main h2 {
     font-weight: 800;
-    font-size: 80px;
+    font-size: 5rem;
     margin-bottom: 40px;
 }
+
 header {
     display: flex;
-    flex-wrap: wrap;
     background-color: var(--negro);
     justify-content: space-between;
     align-items: center;
-    height: 95px;
-    width: 100%;
+    height: 10vh;
     padding: 1.5rem 7.5rem;
 }
 
@@ -69,20 +68,30 @@ header img {
 
 nav {
     display: flex;
-    gap: 150px;
+    gap: 10rem;
+}
+
+nav .menu-hamburguesa-label,
+.menu-hamburguesa-input,
+.menu-hamburguesa-buttons {
+    display: none;
+}
+
+details::marker {
+    display: none;
 }
 
 nav section {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
     height: auto;
 }
 
 nav ul {
     display: flex;
     flex-flow: row wrap;
-    gap: 150px;
+    gap: 10rem;
     align-items: center;
 }
 
@@ -90,31 +99,32 @@ nav li {
     text-transform: capitalize;
 }
 
-nav li ul {
+
+details ul {
     display: flex;
     flex-direction: column;
-    opacity: 0;
+    opacity: 100%;
+    top: 8vh;
     position: absolute;
     background-color: var(--negro);
     align-items: start;
     justify-content: start;
     gap: 2em;
     padding: 1em 2em 1em 1em;
-}
-nav li:hover > ul{
-    opacity: 100%;
+    z-index: 10;
 }
 
-nav a {
+nav a,
+nav summary {
     cursor: pointer;
     color: var(--blanco);
     font-size: 1rem;
     opacity: 50%;
 }
 
-nav a:hover {
+nav a:hover,
+nav summary:hover {
     opacity: 100%;
-
 }
 
 nav p {
@@ -130,12 +140,16 @@ footer {
     position: relative;
 }
 
+.logo-footer-mobile {
+    display: none;
+}
+
 footer section {
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    width: 1400px;
-    padding: 40px 120px;
+    width: 70vw;
+    padding: 4em 0;
 }
 
 footer h1 {
@@ -145,13 +159,17 @@ footer h1 {
 footer ul {
     display: flex;
     justify-content: space-between;
-    width: 760px;
+    width: 70%;
+}
+
+footer svg {
+    color: var(--negro);
 }
 
 footer a {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1em;
     opacity: 50%;
     color: var(--negro);
 }
@@ -164,19 +182,21 @@ footer a:hover {
     background-color: var(--negro);
     color: var(--blanco);
     width: 100%;
-    padding: 30px 120px;
+    padding: 2em;
     display: flex;
     flex-flow: column wrap;
+    align-items: center;
     gap: 20px;
 }
 
 .footer-negativo p {
     opacity: 50%;
-    font-size: 1rem;
+    font-size: 1em;
+    width: 71vw;
 }
 
 .footer-negativo a {
-    opacity: 100%;
+    width: 71vw;
 }
 
 .flecha-scroll-to-top {
@@ -188,17 +208,17 @@ footer a:hover {
 .avisos {
     max-width: 70vw;
 }
+
 .avisos-grid {
     display: flex;
     justify-content: space-between;
     gap: 4em;
-    margin-bottom: 5em ;
+    margin-bottom: 5em;
 }
 
 .aviso {
     display: flex;
-    max-width: 50%;
-    background-color: transparent;
+    width: 100%;
     gap: .5em;
 }
 
@@ -240,7 +260,7 @@ footer a:hover {
     background-color: var(--azul);
     color: var(--blanco);
     border: none;
-    padding: 10px 17px;
+    padding: .9rem 1rem;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -256,97 +276,7 @@ footer a:hover {
     color: var(--verde);
 }
 
-.bienvenidos-a-cineclub-nucleo {
-    background-image: url("img/home/fondo-bienvenida.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--blanco);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    padding-top: 220px;
-
-}
-
-.bienvenida {
-    display: flex;
-    justify-content: center;
-}
-.bienvenido-texto {
-    width: 58vw;
-}
-.bienvenido-texto h1 {
-    font-family: "Bricolage Grotesque";
-    font-weight: 800;
-    font-size: 127px;
-}
-
-.asociate-a-nuestro-club {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
-
-.asociate-texto h1 {
-    font-family: "Bricolage Grotesque";
-    font-weight: 800;
-    font-size: 127px;
-    line-height: 125px;
-}
-
-.bienvenido-botones {
-    font-family: "archivo" sans-serif;
-    font-weight: 600;
-    font-size: 35px;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 1000px;
-}
-
-.boton-asociate {
-    display: flex;
-    margin-top: 20px;
-
-    background-color: var(--azul);
-    color: var(--blanco);
-    border: none;
-    padding: 10px 17px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.boton-entradas {
-    display: flex;
-    margin-top: 20px;
-    background-color: var(--azul);
-    color: var(--blanco);
-    border: none;
-    padding: 10px 17px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.boton-asociate:hover {
-    background-color: var(--verde);
-    color: var(--negro);
-}
-
-.boton-entradas:hover {
-    background-color: var(--verde);
-    color: var(--negro);
-}
-
-.botones {
-    display: flex;
-    gap: 75px;
-    
-}
-
-.titulo{
+.titulo {
     width: 70vw;
     height: auto;
     display: flex;
@@ -354,35 +284,34 @@ footer a:hover {
     align-items: center;
     justify-content: space-between;
 }
+
 .slider-container {
-    width: 100%;
-    margin: 0 auto;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    margin-bottom: 5em;
 }
 
 .slider {
     display: flex;
-    width: 99vw;
+    width: 100vw;
     height: auto;
     overflow: hidden;
     scroll-snap-type: x mandatory;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 .slider ul {
     display: flex;
     padding: 0;
     width: 300%;
-    animation: slide 10s infinite alternate ease-in-out;
 }
+
 .slider li {
     width: 100%;
     position: relative;
 }
+
 .slider .slider-textbox {
     padding: 20px 40px;
     width: 40em;
@@ -391,28 +320,32 @@ footer a:hover {
     flex-direction: column;
     gap: 1em;
     position: absolute;
-    top:25%;
+    top: 25%;
     left: 10em;
     color: var(--blanco);
-    background-color: #292B2125 ;
+    background-color: #292B2125;
     z-index: 3;
 }
+
 .slider-textbox h1 {
     font-size: 3em;
     font-weight: 700;
     font-family: "Bricolage Grotesque", sans-serif;
 }
+
 .slider-textbox h2 {
     font-size: 2em;
     font-weight: 900;
     color: var(--blanco);
     margin-bottom: auto;
 }
+
 .slider-textbox h3 {
     font-size: 2em;
     font-weight: 300;
     font-style: italic;
 }
+
 .slider .slider-textbox button {
     display: flex;
     width: 100%;
@@ -423,12 +356,12 @@ footer a:hover {
     font-weight: 400;
     background-color: var(--azul);
     color: var(--blanco);
-    border:none;
+    border: none;
     transition: all 0.3s ease;
 }
 
 .slider .slider-textbox button:hover {
-    background-color:var(--verde);
+    background-color: var(--verde);
     color: var(--negro);
 }
 
@@ -460,10 +393,142 @@ footer a:hover {
     color: var(--verde);
 }
 
-.slider-home {
-    position: absolute;
-    top: 610px;
+
+
+.boton-asociate:hover {
+    background-color: var(--verde);
+    color: var(--negro);
 }
+
+.boton-entradas:hover {
+    background-color: var(--verde);
+    color: var(--negro);
+}
+
+.slider-bienvenida-container {
+    width: 100vw;
+    height: 90vh;
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+}
+
+.slider-bienvenida {
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    background-image: url(img/home/fondo-bienvenida.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-bienvenida ul {
+    display: flex;
+    width: 200%;
+    animation: sliderbienvenida 6s forwards linear;
+    animation-delay: 2s;
+
+}
+
+@keyframes sliderbienvenida {
+
+    from {
+        margin-left: 0;
+    }
+
+    45% {
+        margin-left: 0%;
+    }
+
+    50% {
+        margin-left: -100%;
+    }
+
+    to {
+        margin-left: -100%;
+    }
+}
+
+
+.slider-bienvenida li {
+    width: 100vw;
+    position: relative;
+}
+
+.slider-bienvenida img {
+    width: 100vw;
+    height: auto;
+    filter: brightness(75%);
+}
+
+.slider-bienvenida-texto {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    color: var(--blanco);
+    z-index: 3;
+}
+
+.slider-bienvenida-texto h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    font-size: 127px;
+    color: var(--blanco)
+}
+
+.slider-bienvenida-botones {
+    font-family: "archivo" sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1000px;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.boton-asociate,
+.boton-entradas {
+    display: flex;
+    margin-top: 20px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 20px 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 25px;
+}
+
+.slider-bienvenida-navarrows {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 13em;
+    z-index: 2;
+}
+
+.slider-bienvenida-navarrows svg {
+    color: var(--verde);
+}
+
+.slider-bienvenida-navarrows svg:hover {
+    color: var(--azul);
+}
+
+
 
 /* POP UPS */
 
@@ -474,7 +539,7 @@ footer a:hover {
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     z-index: 30;
     padding: 0;
@@ -486,6 +551,7 @@ footer a:hover {
     justify-content: space-between;
     height: auto;
     width: 40%;
+    max-width: 700px;
     background-color: var(--blanco);
     padding: 3em;
     gap: .5em;
@@ -493,49 +559,53 @@ footer a:hover {
 }
 
 
-.login-textblock form, [popover] form{
+.login-textblock form,
+[popover] form {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
-.login-textblock form section, [popover] form>div>section {
+.login-textblock form section,
+[popover] form>div>section {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     gap: 1em;
     width: 100%;
     height: auto;
 }
 
-.login-textblock form label, [popover] form label{
+.login-textblock form label,
+[popover] form label {
     display: block;
-    font-weight:700;
+    font-weight: 700;
     margin-top: .5em;
 }
 
-.login-textblock form a, [popover] form a{
-    color:var(--negro);
+.login-textblock form a,
+[popover] form a {
+    color: var(--negro);
     margin-bottom: 1em;
     font-size: 1em;
     font-weight: 400;
 }
 
-[popover] form a{
+[popover] form a {
     color: var(--azul);
 }
 
-[popover] form a:hover{
+[popover] form a:hover {
     color: var(--blanco);
     font-weight: 700;
 }
 
 
-.login-textblock form a:hover{
-    color:var(--azul);
+.login-textblock form a:hover {
+    color: var(--azul);
     font-weight: 700;
 }
 
-.login-textblock form input{
+.login-textblock form input {
     width: 100%;
     height: 3em;
     border: none;
@@ -543,7 +613,7 @@ footer a:hover {
     transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
 }
 
-[popover] form input{
+[popover] form input {
     color: var(--blanco);
     width: 100%;
     height: 2.5em;
@@ -553,10 +623,11 @@ footer a:hover {
 }
 
 
-.login-textblock input:hover,[popover] form input:hover {
+.login-textblock input:hover,
+[popover] form input:hover {
     background-color: var(--gris);
     padding-left: 1em;
-    color:var(--blanco);
+    color: var(--blanco);
     border: none;
 }
 
@@ -571,12 +642,13 @@ footer a:hover {
 .login-textblock input:focus {
     background-color: var(--verde);
     padding-left: 1em;
-    color:var(--negro);
+    color: var(--negro);
     outline: none;
 }
 
 
-.login-textblock input[type="submit"],[popover] form input[type="submit"] {
+.login-textblock input[type="submit"],
+[popover] form input[type="submit"] {
     padding: 1em;
     width: auto;
     height: auto;
@@ -588,42 +660,52 @@ footer a:hover {
 }
 
 
-.login-textblock input[type="submit"]:hover, [popover] form input[type="submit"]:hover {
+.login-textblock input[type="submit"]:hover,
+[popover] form input[type="submit"]:hover {
     color: var(--negro);
     background-color: var(--verde);
     font-weight: 700;
     outline: 1px solid var(--negro);
 }
 
-.login-botones {
+.login-textblock section {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
     gap: 1em;
     margin-top: 1em;
 }
-.login-botones p {
-    font-size: 1em;
+
+.login-textblock h2 {
+    margin: .5em 0;
+    font-size: 1.2em;
 }
 
-.login-botones a {
+.login-textblock a {
+    text-align: center;
+    width: 50%;
+    padding: 1em 0;
+}
+
+.perfil-popup p {
+    margin: 1.5em 0;
+}
+
+.login-botones {
     color: var(--negro);
     background-color: var(--blanco);
     outline: 1px solid var(--negro);
     padding: .5em 1.5em;
 }
 
-.login-botones a:hover {
+.login-botones:hover {
     color: var(--azul);
-    background-color: var(--verde);    
+    background-color: var(--verde);
 }
 
-.login-botones button {
+.login-textblock button {
     position: absolute;
-    top: 2.3em;
-    right: 2.5em;
+    top: 1em;
+    right: 1.5em;
     font-size: 1.4em;
     border: none;
     padding: .4em;
@@ -632,7 +714,7 @@ footer a:hover {
     transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
 }
 
-.login-botones button:hover { 
+.login-textblock button:hover {
     transform: scale(1.2);
     color: var(--blanco);
     background-color: var(--azul);
@@ -650,7 +732,8 @@ footer a:hover {
     cursor: pointer;
     transition: all .3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
 }
-[popover] button:hover { 
+
+[popover] button:hover {
     color: var(--verde);
 }
 
@@ -671,7 +754,7 @@ footer a:hover {
 
 [popover] {
     position: absolute;
-    color:var(--blanco);
+    color: var(--blanco);
     background-color: var(--negro);
     left: 74vw;
     top: 5em;
@@ -679,8 +762,9 @@ footer a:hover {
     padding: 2em;
     border: 1px solid var(--gris);
 }
+
 [popover]>section {
-    width: 20vw; 
+    width: 20vw;
     height: auto;
 }
 
@@ -688,17 +772,17 @@ footer a:hover {
 /* RESEÑAS RECIENTES*/
 
 .reseñasrecientes-container {
-    max-width: 70vw;
-    color: var(--color-blanco);
-    margin: 10em 0 20em;
+    width: 70vw;
+    margin-bottom: 5em;
 }
+
 .reseñasrecientes {
     margin: 3em 0;
     display: grid;
     width: 100%;
     grid-template-columns: repeat(5, 1fr);
     gap: 1em;
-} 
+}
 
 .pelicula {
     display: flex;
@@ -706,9 +790,11 @@ footer a:hover {
     position: relative;
     overflow: hidden;
 }
+
 .pelicula a:hover::after {
     opacity: 100%;
 }
+
 .pelicula a::after {
     height: 100%;
     width: 100%;
@@ -734,12 +820,14 @@ footer a:hover {
     opacity: 0;
     z-index: 1;
     position: absolute;
-    height: 353px;    
+    height: 353px;
 }
+
 .pelicula:has(a:hover).pelicula>section {
     opacity: 1;
     z-index: 3;
 }
+
 .pelicula>section>div {
     display: flex;
     flex-direction: column;
@@ -759,4 +847,411 @@ footer a:hover {
 
 .pelicula h5 {
     font-size: 1.2em;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 12px;
+        overflow-x: hidden;
+    }
+
+    .login-textblock {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90vw;
+        background-color: var(--blanco);
+        padding: 3em;
+        gap: .5em;
+        position: relative;
+    }
+
+    header {
+        height: 10vh;
+        padding: 2em 1em;
+        width: 100vw;
+        height: auto;
+
+    }
+
+    .titulo {
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .titulo h2 {
+        font-size: 2.5rem;
+    }
+
+    /* MENU HAMBURGUESA */
+    [popover],
+    .perfil-popup-button,
+    nav button {
+        display: none;
+    }
+
+    nav>ul {
+        width: 100%;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        height: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+        z-index: 90;
+        background-color: var(--gris);
+        overflow: hidden;
+    }
+
+    nav .menu-hamburguesa-label {
+        display: flex;
+    }
+
+    nav ul>li {
+        position: relative;
+        width: 90vw;
+        margin-top: 1rem;
+    }
+    nav a,
+    nav summary {
+        width: 100%;
+        opacity: 100%;
+        font-size: 1.3rem;
+    }
+    nav input[type="checkbox"]:checked+ul {
+        height: 90vh;
+    }
+
+    .menu-hamburguesa-buttons {
+        display: flex;
+        width: 90vw;
+        flex-direction: column;
+    }
+
+    .menu-hamburguesa-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .acento {
+        flex: 1;
+        background-color: var(--verde);
+        color: var(--negro);
+        padding: 2rem 1rem;
+    }
+
+    .acento:hover {
+        background-color: var(--blanco);
+        color: var(--gris);
+    }
+
+    .acento:active {
+        background-color: var(--blanco);
+        color: var(--verde);
+    }
+    details summary {
+        transition: all .3s linear
+    }
+    summary {
+        padding: 1rem 0;
+    }
+    nav li ul {
+        position: static;
+        opacity: 100%;
+        align-items: start;
+        justify-content: start;
+        gap: 2em;
+        padding: 1em 2em 1em 1em;
+    }
+    details > ul{
+        transition: all .3s linear;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    details[open] > ul {
+        max-height: 200px;
+        display: flex;        
+        opacity: 100%;
+        background-color: var(--negro);
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    details[open] summary{
+        padding: 1rem;
+        background-color:var(--negro) ;
+    }
+    /* MENU HAMBURGUESA */
+    main h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .avisos {
+        max-width: 90vw;
+    }
+
+    .avisos-grid,
+    .aviso {
+        flex-direction: column;
+    }
+
+    .aviso-img {
+        width: 230px;
+        height: auto;
+    }
+
+    footer {
+        height: 100vh;
+        justify-content: space-around;
+        background-color: var(--negro);
+    }
+
+    footer section {
+        opacity: 50%;
+        flex-direction: column;
+        justify-items: start;
+        width: 90vw;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    footer h1 {
+        font-size: 1.5rem;
+        color: var(--blanco);
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    footer svg {
+        color: var(--blanco);
+    }
+
+    footer a {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        opacity: 100%;
+        color: var(--blanco);
+        font-size: 1.3rem;
+    }
+
+    .footer-negativo {
+        color: var(--blanco);
+        padding: 2em;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-negativo p {
+        opacity: 50%;
+        font-size: 1.1rem;
+        width: 90vw;
+    }
+
+    .footer-negativo a {
+        display: none;
+    }
+
+    .flecha-scroll-to-top {
+        position: absolute;
+        top: 3rem;
+        right: 2rem;
+    }
+
+    .logo-footer-mobile {
+        display: flex;
+        width: 90vw;
+        margin-top: 7rem;
+    }
+
+    .reseñasrecientes-container {
+        width: 90vw;
+        margin-bottom: 1em;
+        height: 90vh;
+    }
+
+    .reseñasrecientes {
+        margin: 4em 0;
+        display: flex;
+        position: relative;
+        gap: 1em;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .pelicula {
+        flex: 0 0 auto;
+        width: 80%;
+        position: relative;
+    }
+
+
+
+
+
+    .slider {
+        display: block;
+        width: 100vw;
+        overflow: auto;
+        position: relative;
+
+    }
+
+    .slider ul {
+        display: flex;
+    }
+
+    .slider li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider .slider-textbox {
+        padding: 20px 40px;
+        width: 100vw;
+        position: static;
+        background-color: #292B21cc;
+        z-index: 3;
+    }
+
+    .slider-textbox h1 {
+        font-size: 2em;
+    }
+
+    .slider-textbox h2 {
+        font-size: 1.4em;
+    }
+
+    .slider-textbox h3 {
+        font-size: 1.4em;
+    }
+
+    .slider img {
+        height: auto;
+        width: 100vw;
+        filter: brightness(75%);
+        z-index: 1;
+    }
+
+    .slider-navarrows {
+        position: absolute;
+        height: 50%;
+    }
+
+    .slider-navarrows svg {
+        color: var(--blanco);
+    }
+
+    .slider-navarrows svg:hover {
+        color: var(--verde);
+    }
+
+
+
+    .slider-bienvenida {
+        display: flex;
+        width: 100vw;
+        height: 90vh;
+        overflow: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        background-image: url(img/home/fondo-bienvenida.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .slider-bienvenida ul {
+        width: 200%;
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        animation: sliderbienvenida 6s forwards linear;
+        animation-delay: 2s;
+
+    }
+
+    @keyframes sliderbienvenida {
+
+        0% {
+            margin-left: 0%;
+        }
+
+        45% {
+            margin-left: 0%;
+        }
+
+        50% {
+            margin-left: -100%;
+        }
+
+        100% {
+            margin-left: -100%;
+        }
+    }
+
+
+    .slider-bienvenida li {
+        width: 100%;
+        position: relative;
+    }
+
+    #slide-home1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #slide-home2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider-bienvenida-texto {
+        display: flex;
+        width: 90vw;
+        flex-direction: column;
+        padding: 2rem;
+        position: static;
+    }
+
+    .slider-bienvenida-texto h1 {
+        font-size: 4rem;
+    }
+
+    .slider-bienvenida-botones {
+        font-size: 2em;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 0;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .boton-asociate,
+    .boton-entradas {
+        display: flex;
+        margin-top: 1rem;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
 }
