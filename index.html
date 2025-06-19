@@ -19,11 +19,23 @@
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
         rel="stylesheet">
     <script>
-        function cambiarDisplay(visibilidadNueva) {
+        function switchDisplayPopUp(visibilidadNueva) {
             document.getElementById("login-popup").style.display = visibilidadNueva
         }
         function cerrarPopup() {
-            cambiarDisplay('none')
+            switchDisplayPopUp('none')
+        }
+    </script>
+
+    <script>
+        function switchDisplayTrailer(visibilidadNueva) {
+            document.getElementById("trailer").style.display = visibilidadNueva
+        }
+        function mostrarTrailer() {
+            switchDisplayTrailer('flex')
+        }
+        function ocultarTrailer() {
+            switchDisplayTrailer('none')
         }
     </script>
 </head>
@@ -39,7 +51,6 @@
                 <a href="#" class="login-botones">Registrate</a>
                 <button onClick="cerrarPopup()">X</button>
             </section>
-
         </section>
     </div>
     <header id="header">
@@ -47,26 +58,34 @@
         <section>
             <nav>
                 <label for="menu-hamburguesa" class="menu-hamburguesa-label">
-                        <img src="img/nav/mobile/hamburguesa.svg" alt="icono menu hamburguesa open">
+                    <img src="img/nav/mobile/hamburguesa.svg" alt="icono menu hamburguesa open">
                 </label>
                 <input type="checkbox" name="" id="menu-hamburguesa" class="menu-hamburguesa-input">
                 <ul>
                     <li><a href="pages/calendario.html">Calendario</a></li>
-                    <li><details>
-                        <summary>Idioma</summary>
-                        <ul>
-                            <li>Ingl&eacute;s</li>
-                            <li>Español</li>
-                        </ul>
+                    <li>
+                        <details>
+                            <summary>
+                                <img src="img/home/mobile/dropdown-b.svg" alt="flechita de dropdownmenu">
+                                Idioma
+                            </summary>
+                            <ul>
+                                <li>Ingl&eacute;s</li>
+                                <li>Español</li>
+                            </ul>
                         </details>
                     </li>
-                    <li><details>
-                        <summary>secciones</summary>
-                        <ul>
-                            <li><a href="pages/avisos.html">Avisos</a></li>
-                            <li><a href="pages/historia.html">Historia</a></li>
-                            <li><a href="pages/reseñas.html">Reseñas</a></li>
-                        </ul>
+                    <li>
+                        <details>
+                            <summary>
+                                <img src="img/home/mobile/dropdown-b.svg" alt="flechita de dropdownmenu">
+                                Secciones
+                            </summary>
+                            <ul>
+                                <li><a href="pages/avisos.html">Avisos</a></li>
+                                <li><a href="pages/historia.html">Historia</a></li>
+                                <li><a href="pages/reseñas.html">Reseñas</a></li>
+                            </ul>
                         </details>
                     </li>
                     <section class="menu-hamburguesa-buttons">
@@ -135,7 +154,6 @@
                 </ul>
             </section>
         </article>
-
         <article class="slider-container">
             <section class="titulo">
                 <h2>Proximas funciones</h2>
@@ -148,8 +166,8 @@
                         <section class="slider-textbox">
                             <h1>La venganza</h1>
                             <h3>Gustav Möller, 2024</h3>
-                            <a href="#" class="btn">Comprar entrada</a>
-                            <a href="#" class="btn ver-trailer">Ver trailer</a>
+                            <a href="pages/calendario.html" class="btn">Comprar entrada</a>
+                            <a href="#trailer" class="btn" onclick="mostrarTrailer()">Ver trailer</a>
                         </section>
                         <section class="slider-navarrows">
                             <a href="#slide-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
@@ -170,7 +188,7 @@
                             <h1>Foxtrot (The Other Side of Paradise)</h1>
                             <h2>Charlotte Rampling X 4</h2>
                             <h3>Arturo Ripstein, 1976</h3>
-                            <a href="#" class="btn">Comprar entrada</a>
+                            <a href="pages/calendario.html" class="btn">Comprar entrada</a>
                         </section>
                         <section class="slider-navarrows">
                             <a href="#slide-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
@@ -191,7 +209,7 @@
                             <h1>Paris by Night</h1>
                             <h2>Charlotte Rampling X 4</h2>
                             <h3>David Hare, 1988</h3>
-                            <a href="#" class="btn">Comprar entrada</a>
+                            <a href="pages/calendario.html" class="btn">Comprar entrada</a>
                         </section>
                         <section class="slider-navarrows">
                             <a href="#slide-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="35"
@@ -208,8 +226,18 @@
                     </li>
                 </ul>
             </section>
+            <section id="trailer">
+                <video controls muted src="video/lavenganza-trailer.mp4"></video>
+                <section class="slider-textbox vid">
+                    <h1>La venganza</h1>
+                    <h3>Gustav Möller, 2024</h3>
+                    <p>La idealista funcionaria de prisiones Eva se enfrenta al dilema de su vida cuando un joven de su
+                        pasado es trasladado a la prisi&oacute;n donde trabaja.</p>
+                    <a href="pages/calendario.html" class="btn">Comprar entrada</a>
+                    <button onClick="ocultarTrailer()">X</button>
+                </section>
+            </section>
         </article>
-
         <article class="avisos">
             <h2>Avisos</h2>
             <div class="avisos-grid">
@@ -226,7 +254,7 @@
                                 inteligencia y audacia las que la transformaron en una figura indispensable del cine de
                                 los 70.</p>
                         </div>
-                        <a href="#" class="btn">Leer más</a>
+                        <a href="pages/avisos.html" class="btn">Leer más</a>
                     </div>
                 </article>
 
@@ -241,7 +269,7 @@
                                 sola función a las 17.30 h, en lugar de las tradicionales dos exhibiciones. Además, se
                                 mantendrán las del segundo y cuarto domingo de cada mes.</p>
                         </div>
-                        <a href="#" class="btn">Leer más</a>
+                        <a href="pages/avisos.html" class="btn">Leer más</a>
                     </div>
                 </article>
             </div>
@@ -253,118 +281,111 @@
                     <summary class="btn">Ordenar</summary>
                     <a href="#">Recientes</a>
                     <a href="#">Antiguas</a>
-                </details>                
+                </details>
             </section>
             <section class="reseñasrecientes">
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/01-la-venganza.jpg"
-                            alt="portada pelicula la venganza"></a>
-                    <section>
+                    <img src="img/recientes-reviews/01-la-venganza.jpg" alt="portada de pelicula la venganza">
+                    <a href="pages/calendario.html">
                         <div>
                             <h3>La venganza</h3>
                             <h4>Gustav Möller, 2024</h4>
                         </div>
                         <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
-                    </section>
+                    </a>
                 </section>
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/02-las-vidas.jpg"
-                            alt="portada pelicula la vidas de sing sing"></a>
-                    <section>
+                    <img src="img/recientes-reviews/02-las-vidas.jpg" alt="portada de pelicula las vidas de sing sing">
+                    <a href="#">
                         <div>
                             <h3>Las vidas de Sing Sing</h3>
                             <h4>Greg Kwedar, 2023</h4>
                         </div>
-                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
-                    </section>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </a>
                 </section>
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/03-chien-dela.jpg"
-                            alt="portada pelicula la venganza"></a>
-                    <section>
+                    <img src="img/recientes-reviews/03-chien-dela.jpg" alt="portada de pelicula perro ferroz">
+                    <a href="#">
                         <div>
-                            <h3>Perro feroz</h3>
+                            <h3>Perro ferroz</h3>
                             <h4>Jean-Baptiste Durant, 2023</h4>
                         </div>
-                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
-                    </section>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </a>
                 </section>
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/04-el-chef.jpg" alt="portada pelicula la venganza"></a>
-                    <section>
+                    <img src="img/recientes-reviews/04-el-chef.jpg" alt="portada de pelicula el chef">
+                    <a href="#">
                         <div>
                             <h3>El chef</h3>
                             <h4>Philip Barantini, 2021</h4>
                         </div>
-                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
-                    </section>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </a>
                 </section>
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/05-gloria.jpg" alt="portada pelicula la venganza"></a>
-                    <section>
+                    <img src="img/recientes-reviews/05-gloria.jpg" alt="portada de pelicula gloria">
+                    <a href="#">
                         <div>
-                            <h3>Gloria</h3>
+                            <h3>Gloria!</h3>
                             <h4>Marguerita Vicario, 2024</h4>
                         </div>
-                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
-                    </section>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </a>
                 </section>
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/06-vidas-pasadas.jpg"
-                            alt="portada pelicula la venganza"></a>
-                    <section>
+                    <img src="img/recientes-reviews/06-vidas-pasadas.jpg" alt="portada de pelicula vidas pasadas">
+                    <a href="#">
                         <div>
                             <h3>Vidas pasadas</h3>
-                            <h4>Celine Song, 2023</h4>
+                            <h4> Celine Song, 2023</h4>
                         </div>
-                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
-                    </section>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </a>
                 </section>
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/07-la-zone.jpg" alt="portada pelicula la venganza"></a>
-                    <section>
+                    <img src="img/recientes-reviews/07-la-zone.jpg" alt="portada de pelicula zona de interes">
+                    <a href="#">
                         <div>
                             <h3>Zona de inter&eacute;s</h3>
                             <h4>Jonathan Glazer, 2023</h4>
                         </div>
-                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
-                    </section>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </a>
                 </section>
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/08-valeria-viene.jpg"
-                            alt="portada pelicula la venganza"></a>
-                    <section>
+                    <img src="img/recientes-reviews/08-valeria-viene.jpg" alt="portada de pelicula valeria viene a casarse">
+                    <a href="#">
                         <div>
                             <h3>Valeria viene a casarse</h3>
                             <h4>Michal Vinik, 2022</h4>
                         </div>
-                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
-                    </section>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </a>
                 </section>
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/09-un-silencio.jpg"
-                            alt="portada pelicula la venganza"></a>
-                    <section>
+                    <img src="img/recientes-reviews/09-un-silencio.jpg" alt="portada de pelicula un silencio">
+                    <a href="#">
                         <div>
                             <h3>Un silencio</h3>
                             <h4>Joachim Lafosse, 2023</h4>
                         </div>
-                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
-                    </section>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </a>
                 </section>
                 <section class="pelicula">
-                    <a href="#"><img src="img/recientes-reviews/10-parthenope.jpg"
-                            alt="portada pelicula la venganza"></a>
-                    <section>
+                    <img src="img/recientes-reviews/10-parthenope.jpg" alt="portada de pelicula parthenope">
+                    <a href="#">
                         <div>
                             <h3>Parthenope</h3>
                             <h4>Paolo Sorrentino, 2024</h4>
                         </div>
-                        <h5>Ficha t&eacute;cnica con cr&iacute;tica</h5>
-                    </section>
+                        <h5>Ficha t&eacute;cnica con cr&iacute;tica:</h5>
+                    </a>
                 </section>
             </section>
-            <a href="#" class="btn">Ver m&aacute;s reseñas</a>
+            <a href="pages/reseñas.html" class="btn">Ver m&aacute;s reseñas</a>
         </article>
     </main>
     <footer>
@@ -375,32 +396,30 @@
         <section>
             <h1>Contacto</h1>
             <ul>
-                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                             fill="none">
                             <path opacity="0.5"
                                 d="M16 11.0765L11.3151 10.5342L9.07495 12.7744C6.55153 11.4907 4.50039 9.43958 3.21667 6.91616L5.46575 4.66707L4.92348 0H0.0252801C-0.49032 9.04968 6.95033 16.4903 16 15.9747V11.0765Z"
                                 fill="currentColor" />
                         </svg> 4825-4102</a>
                 </li>
-                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"
-                            fill="none">
+                <li><a href="mailto:ccnucleo@hotmail.com?Subject=Hola"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="16" viewBox="0 0 20 16" fill="none">
                             <path opacity="0.5" d="M0 16V0H20V16H0ZM10 9L18 4V2L10 7L2 2V4L10 9Z" fill="currentColor" />
                         </svg>
                         ccnucleo@hotmail.com</a></li>
-                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                            fill="none">
+                <li><a href="https://www.instagram.com/cineclubnucleo/?hl=es"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path opacity="0.5"
                                 d="M5.8 0H14.2C17.4 0 20 2.6 20 5.8V14.2C20 15.7383 19.3889 17.2135 18.3012 18.3012C17.2135 19.3889 15.7383 20 14.2 20H5.8C2.6 20 0 17.4 0 14.2V5.8C0 4.26174 0.61107 2.78649 1.69878 1.69878C2.78649 0.61107 4.26174 0 5.8 0ZM5.6 2C4.64522 2 3.72955 2.37928 3.05442 3.05442C2.37928 3.72955 2 4.64522 2 5.6V14.4C2 16.39 3.61 18 5.6 18H14.4C15.3548 18 16.2705 17.6207 16.9456 16.9456C17.6207 16.2705 18 15.3548 18 14.4V5.6C18 3.61 16.39 2 14.4 2H5.6ZM15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7Z"
                                 fill="currentColor" />
                         </svg>cineclubnucleo</a>
                 </li>
-
             </ul>
         </section>
-
         <section class="footer-negativo">
 
-            <a href=""><img src="img/nav/logo-nav.svg" alt="foto de perfil del miembro/usuario"></a>
+            <a href="#"><img src="img/nav/logo-nav.svg" alt="logo de cineclub nucleo en footer"></a>
             <p>CineClub Núcleo - Sitio preparado y mantenido por Gabriel Medina Ernst - Cel/WA 15-6752-9651 - Buenos
                 Aires - Argentina LTD 63896 RD WE 200508177</p>
         </section>
