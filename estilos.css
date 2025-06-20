@@ -897,34 +897,39 @@ footer a:hover {
     display: flex;
     width: 100vw;
     height: 42vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .fondo-historia h1 {
     color: var(--blanco);
-    font-size: 128px;
+    font-size: 8rem;
     font-family: Bricolage Grotesque;
-    padding: 2em 260px;
+    display: flex;
+    text-align: start;
+    width: 70vw;
 }
 
 .historia {
     display: flex;
     flex-direction: row;
-    gap: 160px;
+    justify-content: space-between;
+    width: 70vw;
+    gap: 5em;
+    margin-bottom: 5rem;
 }
 
 .texto-historia {
     display: flex;
     flex-direction: column;
-    width: 850px;
-   padding-left: 260px;
+    width: 50%;
 }
 
 .texto-historia p {
     color: var(--negro);
     font-family: Archivo;
-    font-size: 24px;
-    font-style: normal;
-    line-height: 30px;
+    font-size: 1rem;
+    line-height: 1.1rem;
     padding-top: 50px;
 }
 
@@ -942,27 +947,27 @@ footer a:hover {
     flex-direction: column;
     gap: 25px;
     padding-top: 50px;
+    width: 50%;
 }
 
 .review {
+    margin: 2rem 0;
     display: flex;
     flex-direction: row;
-    gap: 160px;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
 }
 
 .texto-review {
     display: flex;
     flex-direction: column;
-    width: 850px;
-    padding-left: 260px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    width: 50%;
 }
 
 .review h5 {
     color: var(--negro);
     font-size: 45px;
-    font-family: Archivo;
     padding-bottom: 20px;
 }
 
@@ -982,10 +987,7 @@ footer a:hover {
     padding-bottom: 30px;
 }
 
-.foto-review {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
+
 
 .otras-reviews {
     display: flex;
@@ -993,8 +995,8 @@ footer a:hover {
     align-items: center;
 }
 
-.otras-reviews h4{
-    color:var(--negro);
+.otras-reviews h4 {
+    color: var(--negro);
     font-size: 52px;
     font-family: Archivo;
     padding-top: 80px;
@@ -1443,13 +1445,46 @@ footer a:hover {
         gap: 1.1em;
         width: 90vw;
     }
-    .vid a{
+
+    .vid a {
         text-align: center;
         padding: 1.5em;
     }
+
     .vid p {
         font-size: 1.35em;
         line-height: 1.5em;
+    }
+
+    .fondo-historia h1 {
+        font-size: 4rem;
+        width: 90vw;
+    }
+
+    .historia {
+        flex-direction: column;
+        width: 90vw;
+        gap: 1em;
+        margin-bottom: 10rem;
+    }
+
+    .texto-historia {
+        width: 100%;
+    }
+
+    .texto-historia p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        padding-top: 0;
+    }
+
+    .texto-historia h5 {
+        font-size: 1.9rem;
+        padding: 1rem 0;
+    }
+
+    .fotos-historia {
+        width: 100%;
     }
 
 
