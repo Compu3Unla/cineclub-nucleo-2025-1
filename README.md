@@ -7,9 +7,13 @@ Proponemos un rediseño al sitio y a la identidad de la página del cineclub nú
 Integrantes:
 
 Lopez, Uriel Walter
+
 Ortiz, Daiana Aylen
+
 Barrera, Fernando Ezequiel
+
 Faba, Alejandro Guillermo
+
 
 Notas útiles
 
