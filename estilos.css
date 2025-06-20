@@ -344,8 +344,116 @@ footer a:hover {
     
 }
 
+.fondo-historia {
+    background: url(img/historia/01-salvador.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    width: 100vw;
+    height: 42vh;
+}
 
+.fondo-historia h1 {
+    color: var(--blanco);
+    font-size: 128px;
+    font-family: Bricolage Grotesque;
+    padding: 2em 260px;
+}
 
+.historia {
+    display: flex;
+    flex-direction: row;
+    gap: 160px;
+}
+
+.texto-historia {
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+   padding-left: 260px;
+}
+
+.texto-historia p {
+    color: var(--negro);
+    font-family: Archivo;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 30px;
+    padding-top: 50px;
+}
+
+.texto-historia h5 {
+    color: var(--azul);
+    font-family: Archivo;
+    font-size: 32px;
+    font-style: normal;
+    line-height: normal;
+    padding-top: 50px;
+}
+
+.fotos-historia {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 50px;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    gap: 160px;
+}
+
+.texto-review {
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    padding-left: 260px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.review h5 {
+    color: var(--negro);
+    font-size: 45px;
+    font-family: Archivo;
+    padding-bottom: 20px;
+}
+
+.review h4 {
+    color: var(--negro);
+    font-size: 25px;
+    font-family: Archivo;
+    padding-bottom: 40px;
+}
+
+.review p {
+    color: var(--negro);
+    font-size: 22px;
+    font-family: Archivo;
+    line-height: 30px;
+    word-wrap: break-word;
+    padding-bottom: 30px;
+}
+
+.foto-review {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.otras-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.otras-reviews h4{
+    color:var(--negro);
+    font-size: 52px;
+    font-family: Archivo;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
 
 .titulo{
     width: 100%;
